@@ -18,10 +18,10 @@ Checkout() {
 }
 
 CopyTestResources() {
-  rm -rf $projectDir"/src/ssdg-test-read-only"
+  rm -rf $projectDir"/spring-session-data-gemfire-main/src/ssdg*"
   mkdir -p $projectDir"/src"
-  cp -R $ssdgPath"/spring-session-data-geode/src/test/" $projectDir"/src/ssdg-test-read-only"
-  cp -R $ssdgPath"/spring-session-data-geode/src/integration-test/" $projectDir"/src/ssdg-integration-test-read-only"
+  cp -R $ssdgPath"/spring-session-data-geode/src/test/" $projectDir"/spring-session-data-gemfire-main/src/ssdg-test-read-only"
+  cp -R $ssdgPath"/spring-session-data-geode/src/integration-test/" $projectDir"/spring-session-data-gemfire-main/src/ssdg-integration-test-read-only"
 }
 
 while [[ $# -gt 0 ]]; do

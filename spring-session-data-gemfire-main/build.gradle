@@ -1,0 +1,107 @@
+plugins {
+  id 'java-library'
+  id 'maven-publish'
+  id "io.freefair.lombok" version "5.3.0"
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+configurations {
+  integration-test
+}
+
+dependencies {
+  implementation 'org.springframework.session:spring-session-data-geode:2.6.1'
+  implementation 'org.springframework:spring-context-support:5.3.20'
+  implementation 'org.springframework:spring-jcl:5.3.20'
+  implementation 'com.vmware.gemfire:spring-data-gemfire:9.15.0-build.9999-SD26'
+  implementation 'org.springframework.session:spring-session-core:2.6.3'
+  implementation 'com.google.code.findbugs:jsr305:3.0.2'
+  implementation 'org.springframework.security:spring-security-core:5.6.3'
+  implementation 'org.springframework.security:spring-security-web:5.6.3'
+  implementation 'edu.umd.cs.mtc:multithreadedtc:1.01'
+  implementation 'org.springframework.data:spring-data-geode-test:0.2.2-Q'
+  testImplementation 'org.assertj:assertj-core:3.22.0'
+  testImplementation 'junit:junit:4.13.2'
+  testImplementation 'org.mockito:mockito-core:4.4.0'
+  testImplementation 'org.springframework:spring-test:5.3.19'
+  testImplementation 'org.springframework:spring-web:5.3.19'
+  testImplementation 'ch.qos.logback:logback-classic:1.2.3'
+  testImplementation 'org.slf4j:log4j-over-slf4j:1.7.36'
+  compileOnly 'javax.servlet:javax.servlet-api:3.1.0'
+  testCompileOnly 'javax.servlet:javax.servlet-api:3.1.0'
+}
+
+sourceSets{
+  test{
+    java{
+      srcDir file('src/test/java')
+      srcDir file('src/ssdg-test-read-only/java')
+    }
+    resources{
+      srcDir file('src/test/resources')
+      srcDir file('src/ssdg-test-read-only/resources')
+    }
+  }
+  integration{
+    java{
+      srcDir file('src/ssdg-integration-test-read-only/java')
+    }
+    resources{
+      srcDir file('src/ssdg-integration-test-read-only/resources')
+    }
+  }
+}
+
+description = 'Spring Session Data for Tanzu GemFire'
+
+publishing {
+  publications {
+    maven(MavenPublication) {
+      groupId = project.group
+      artifactId = 'spring-session-data-gemfire'
+      version = project.version
+
+      from components.java
+    }
+  }
+}
+
+task copySpringTestClasses(type: Exec) {
+  dependsOn(":spring-session-data-gemfire-parent:cleanSpringTestClasses")
+  workingDir "${rootProject.rootDir}/scripts"
+  commandLine 'chmod', '+x', 'copySSDGTestResources.sh'
+  if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+    commandLine 'cmd', '/c', 'mycommand'
+  } else {
+    commandLine './copySSDGTestResources.sh', '-l', "${rootProject.rootDir}/tmp/spring-session-data-geode", '-b',
+        "${springSessionDataGeodeVersion}", '-t', "${rootProject.rootDir}"
+  }
+}
+
+task cleanSpringTestResources(type: Exec) {
+  commandLine 'rm', '-rf', "${project.projectDir}/src/ssdg-test-read-only","${project.projectDir}/src/ssdg-integration-test-read-only"
+}
+
+clean {
+  dependsOn(":spring-session-data-gemfire-parent:cleanSpringTestClasses")
+  dependsOn("cleanSpringTestResources")
+}
+
+test{
+  dependsOn("copySpringTestClasses")
+  forkEvery = 1
+  maxParallelForks = 1
+
+//  systemProperty "java.util.logging.config.file", "${project.buildDir}/test-classes/java-util-logging.properties"
+//  systemProperty "javax.net.ssl.keyStore", "${project.buildDir}/test-classes/trusted.keystore"
+//  systemProperty "gemfire.disableShutdownHook", "true"
+//  systemProperty "logback.log.level", "error"
+//  systemProperty "spring.profiles.active", "apache-geode"
+
+  filter {
+    includeTestsMatching "*.*Tests"
+    includeTestsMatching "*.*Test"
+  }
+}
