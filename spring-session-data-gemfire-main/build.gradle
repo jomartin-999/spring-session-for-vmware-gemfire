@@ -2,17 +2,22 @@ plugins {
   id 'java-library'
   id 'maven-publish'
   id "io.freefair.lombok" version "5.3.0"
+  id 'nebula.facet' version "9.6.3"
 }
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
-configurations {
-  integration-test
+facets {
+  integrationTest {
+    includeInCheckLifecycle = false
+  }
 }
 
 dependencies {
-  implementation 'org.springframework.session:spring-session-data-geode:2.6.1'
+  api ('org.springframework.session:spring-session-data-geode:2.6.1'){
+    exclude group:'org.springframework.data',module:'spring-data-geode'
+  }
   implementation 'org.springframework:spring-context-support:5.3.20'
   implementation 'org.springframework:spring-jcl:5.3.20'
   implementation 'com.vmware.gemfire:spring-data-gemfire:9.15.0-build.9999-SD26'
@@ -21,7 +26,10 @@ dependencies {
   implementation 'org.springframework.security:spring-security-core:5.6.3'
   implementation 'org.springframework.security:spring-security-web:5.6.3'
   implementation 'edu.umd.cs.mtc:multithreadedtc:1.01'
-  implementation 'org.springframework.data:spring-data-geode-test:0.2.2-Q'
+  implementation('org.springframework.data:spring-data-geode-test:0.2.2-Q')
+  {
+    exclude group:'org.springframework.data',module:'spring-data-geode'
+  }
   testImplementation 'org.assertj:assertj-core:3.22.0'
   testImplementation 'junit:junit:4.13.2'
   testImplementation 'org.mockito:mockito-core:4.4.0'
@@ -31,24 +39,29 @@ dependencies {
   testImplementation 'org.slf4j:log4j-over-slf4j:1.7.36'
   compileOnly 'javax.servlet:javax.servlet-api:3.1.0'
   testCompileOnly 'javax.servlet:javax.servlet-api:3.1.0'
+
+  integrationTestImplementation "com.google.code.findbugs:jsr305:3.0.2"
+  integrationTestImplementation "org.springframework.shell:spring-shell:1.2.0.RELEASE"
 }
 
-sourceSets{
-  test{
-    java{
+sourceSets {
+  test {
+    java {
       srcDir file('src/test/java')
       srcDir file('src/ssdg-test-read-only/java')
     }
-    resources{
+    resources {
       srcDir file('src/test/resources')
       srcDir file('src/ssdg-test-read-only/resources')
     }
   }
-  integration{
-    java{
+  integrationTest {
+    java {
+      srcDir file('src/integrationTest/java')
       srcDir file('src/ssdg-integration-test-read-only/java')
     }
-    resources{
+    resources {
+      srcDir file('src/integrationTest/resources')
       srcDir file('src/ssdg-integration-test-read-only/resources')
     }
   }
@@ -81,7 +94,7 @@ task copySpringTestClasses(type: Exec) {
 }
 
 task cleanSpringTestResources(type: Exec) {
-  commandLine 'rm', '-rf', "${project.projectDir}/src/ssdg-test-read-only","${project.projectDir}/src/ssdg-integration-test-read-only"
+  commandLine 'rm', '-rf', "${project.projectDir}/src/ssdg-test-read-only", "${project.projectDir}/src/ssdg-integration-test-read-only"
 }
 
 clean {
@@ -89,16 +102,22 @@ clean {
   dependsOn("cleanSpringTestResources")
 }
 
-test{
+integrationTest{
   dependsOn("copySpringTestClasses")
   forkEvery = 1
   maxParallelForks = 1
 
-//  systemProperty "java.util.logging.config.file", "${project.buildDir}/test-classes/java-util-logging.properties"
-//  systemProperty "javax.net.ssl.keyStore", "${project.buildDir}/test-classes/trusted.keystore"
-//  systemProperty "gemfire.disableShutdownHook", "true"
-//  systemProperty "logback.log.level", "error"
-//  systemProperty "spring.profiles.active", "apache-geode"
+  filter {
+    includeTestsMatching "*.*Tests"
+    includeTestsMatching "*.*Test"
+    excludeTestsMatching("org.springframework.session.data.gemfire.serialization.pdx.SessionSerializationWithPdxRequiresNoServerConfigurationIntegrationTests")
+  }
+}
+
+test {
+  dependsOn("copySpringTestClasses")
+  forkEvery = 1
+  maxParallelForks = 1
 
   filter {
     includeTestsMatching "*.*Tests"
