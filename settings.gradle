@@ -1,10 +1,14 @@
 pluginManagement {
   includeBuild('build-tools/gemfire-server-integration-test-plugin')
+  includeBuild('build-tools/scripts')
+  includeBuild('build-tools/dependency-constraints')
 }
 
 rootProject.name = 'spring-session-data-gemfire'
 include(':spring-session-data-gemfire-parent')
 include(':spring-session-data-gemfire-main')
 
-
+include(":samples:boot:gemfire")
+//includeBuild("samples/boot/gemfire-with-gfsh-servers")
+//includeBuild("samples/boot/gemfire-with-scoped-proxies")
 

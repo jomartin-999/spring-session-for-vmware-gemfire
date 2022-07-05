@@ -22,6 +22,8 @@ CopyTestResources() {
   mkdir -p $projectDir"/src"
   cp -R $ssdgPath"/spring-session-data-geode/src/test/" $projectDir"/spring-session-data-gemfire-main/src/ssdg-test-read-only"
   cp -R $ssdgPath"/spring-session-data-geode/src/integration-test/" $projectDir"/spring-session-data-gemfire-main/src/ssdg-integration-test-read-only"
+  cp -R $ssdgPath"/spring-session-data-geode/src/test/resources/org" $projectDir"/spring-session-data-gemfire-main/src/ssdg-integration-test-read-only/resources/"
+#  cp -R $ssdgPath"/samples" $projectDir
 }
 
 while [[ $# -gt 0 ]]; do
