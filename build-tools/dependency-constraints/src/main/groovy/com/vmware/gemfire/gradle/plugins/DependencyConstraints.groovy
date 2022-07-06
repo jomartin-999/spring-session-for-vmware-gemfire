@@ -31,14 +31,16 @@ class DependencyConstraints {
     depVersionMapping.put("springShellVersion", "1.2.0.RELEASE")
     depVersionMapping.put("apacheGeodeVersion","1.14.4")
     depVersionMapping.put("findbugsVersion","3.0.2")
-    depVersionMapping.put("springVersion","5.3.19")
+    depVersionMapping.put("springVersion","5.3.20")
     depVersionMapping.put("springBootVersion","2.6.6")
     depVersionMapping.put("springDataBomVersion","2021.1.4")
     depVersionMapping.put("springDataCommonsVersion","2.6.4")
     depVersionMapping.put("springDataGeodeVersion","2.6.4")
-    depVersionMapping.put("springDataGeodeTestVersion","0.2.2-Q")
+    depVersionMapping.put("sdgtVersion","0.2.2-Q")
     depVersionMapping.put("springSessionVersion","2.6.4-SNAPSHOT")
     depVersionMapping.put("springSessionBomVersion","2021.1.2")
+    depVersionMapping.put("multithreadedtcVersion","1.01")
+    depVersionMapping.put("apacheLogging","2.14.1")
 
     return depVersionMapping
   }
@@ -47,6 +49,7 @@ class DependencyConstraints {
 
     project.dependencies {
       api(platform(group: 'org.springframework', name: 'spring-framework-bom', version: get('springVersion')))
+      api(platform(group: 'org.springframework.security', name: 'spring-security-bom', version: get('springSecurityVersion')))
       api(platform(group: 'org.springframework.data', name: 'spring-data-bom', version: get('springDataBomVersion')))
 //      api(platform(group: 'io.micrometer', name: 'micrometer-bom', version: get('micrometerVersion')))
       constraints {
@@ -57,7 +60,7 @@ class DependencyConstraints {
         api(group: 'ch.qos.logback', name: 'logback-classic', version: get('logbackVersion'))
         api(group: 'edu.umd.cs.mtc', name: 'multithreadedtc', version: get('multithreadedtcVersion'))
         api(group: 'junit', name: 'junit', version: get('junitVersion'))
-        api(group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: get('log4jVersion'))
+        api(group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: get('apacheLogging'))
         api(group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: get('apacheTaglibsVersion'))
         api(group: 'org.apache.taglibs', name: 'taglibs-standard-jstlel', version: get('apacheTaglibsVersion'))
         api(group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: get('apacheTaglibsVersion'))
@@ -68,7 +71,7 @@ class DependencyConstraints {
         api(group: 'org.slf4j', name: 'jcl-over-slf4j', version: get('slf4jVersion'))
         api(group: 'org.slf4j', name: 'log4j-over-slf4j', version: get('slf4jVersion'))
         api(group: 'org.springframework.data', name: 'spring-data-geode', version: get('springDataGeodeVersion'))
-        api(group: 'org.springframework.data', name: 'spring-data-geode-test', version: get('springDataGeodeTestVersion'))
+        api(group: 'org.springframework.data', name: 'spring-data-geode-test', version: get('sdgtVersion'))
         api(group: 'org.springframework.security', name: 'spring-security-test', version: get('springSecurityVersion'))
         api(group: 'org.springframework.security', name: 'spring-security-web', version: get('springSecurityVersion'))
         api(group: 'org.springframework.session', name: 'spring-session-core', version: get('springSessionVersion'))
@@ -84,45 +87,7 @@ class DependencyConstraints {
         api(group: 'org.seleniumhq.selenium', name: 'selenium-api', version: get('seleniumVersion'))
         api(group: 'org.seleniumhq.selenium', name: 'selenium-remote-driver', version: get('seleniumVersion'))
         api(group: 'org.seleniumhq.selenium', name: 'selenium-support', version: get('seleniumVersion'))
-
-
-//        // Java EE 9 dependencies
-//        api(group: 'jakarta.annotation', name: 'jakarta.annotation-api', version: get('jakartaAnnotationApiVersion'))
-//        api(group: 'jakarta.resource', name: 'jakarta.resource-api', version: get('jakartaResourceApiVersion'))
-//        api(group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: get('jakartaxServletApiVersion'))
-//        api(group: 'jakarta.servlet.jsp.jstl', name: 'jakarta.servlet.jsp.jstl-api', version: get('jakartaServletJspJstlApiVersion'))
-//        api(group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: get('jakartaServletJspJstlApiVersion'))
-//        api(group: 'antlr', name: 'antlr', version: get('antlrVersion'))
-//        // JUnit & Test dependencies
-//        api(group: 'junit', name: 'junit', version: get('junitVersion'))
-//        api(group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: get('junitJupiterVersion'))
-//        api(group: 'org.junit.vintage', name: 'junit-vintage-engine', version: get('junitJupiterVersion'))
-//        api(group: 'org.assertj', name: 'assertj-core', version: get('assertjVersion'))
-//        api(group: 'org.mockito', name: 'mockito-core', version: get('mockitoVersion'))
-//        api(group: 'org.projectlombok', name: 'lombok', version: get('lombokVersion'))
-//        api(group: 'org.seleniumhq.selenium', name: 'htmlunit-driver', version: get('seleniumHtmlUnitVersion'))
-//        api(group: 'edu.umd.cs.mtc', name: 'multithreadedtc', version: get('multithreadedtcVersion'))
-//        // Logging dependencies
-//        api(group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: get('log4jVersion'))
-//        api(group: 'org.slf4j:jcl-over-slf4j', version: get('slf4jVersion'))
-//        api(group: 'org.slf4j', name: 'jul-to-slf4j', version: get('slf4jVersion'))
-//        api(group: 'org.slf4j', name: 'log4j-over-slf4j', version: get('slf4jVersion'))
-//        api(group: 'ch.qos.logback', name: 'logback-classic', version: get('logbackVersion'))
-//        // Spring dependencies
-//        api(group: 'org.springframework.data', name: 'spring-data-geode-test', version: get('springDataGeodeTestVersion'))
-//        api(group: 'org.springframework.security', name: 'spring-security-test', version: get('springSecurityVersion'))
-//        api(group: 'org.springframework.security', name: 'spring-security-web', version: get('springSecurityVersion'))
-//        api(group: 'org.springframework.session', name: 'spring-session-core', version: get('springSessionVersion'))
-//        api(group: 'org.springframework.shell', name: 'spring-shell', version: get('springShellVersion'))
-//        // Web dependencies
-//        api(group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version: get('apacheTaglibsVersion'))
-//        api(group: 'org.apache.taglibs', name: 'taglibs-standard-jstlel', version: get('apacheTaglibsVersion'))
-//        api(group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: get('apacheTaglibsVersion'))
-//        api(group: 'org.webjars', name: 'bootstrap', version: '2.3.2')
-//        api(group: 'org.webjars', name: 'jquery', version: '3.6.0')
-//        api(group: 'org.webjars', name: 'webjars-locator-core', version: '0.32')
-//        api(group: 'org.webjars', name: 'webjars-locator', version: '0.32-1')
-
+        api(group: 'edu.umd.cs.mtc', name: 'multithreadedtc', version: get('multithreadedtcVersion'))
       }
     }
   }

@@ -3,6 +3,7 @@ plugins {
   id 'maven-publish'
   id "io.freefair.lombok" version "5.3.0"
   id 'nebula.facet' version "9.6.3"
+  id 'dependency-constraints'
 }
 
 facets {
@@ -15,41 +16,43 @@ dependencies {
   api ('org.springframework.session:spring-session-data-geode:2.6.1'){
     exclude group:'org.springframework.data',module:'spring-data-geode'
   }
-  api 'org.springframework:spring-context-support:5.3.20'
-  api 'org.springframework:spring-jcl:5.3.20'
+  api 'org.springframework:spring-context-support'
+  api 'org.springframework:spring-jcl'
 
   api 'com.vmware.gemfire:spring-data-gemfire:9.15.0-build.9999-SD26'
   api 'org.springframework.session:spring-session-core:2.6.3'
 
 
   api 'com.google.code.findbugs:jsr305:3.0.2'
-  api 'org.springframework.security:spring-security-core:5.6.3'
-  api 'org.springframework.security:spring-security-web:5.6.3'
-  testImplementation 'edu.umd.cs.mtc:multithreadedtc:1.01'
-  testImplementation('org.springframework.data:spring-data-geode-test:0.2.2-Q')
+  api 'org.springframework.security:spring-security-core'
+  api 'org.springframework.security:spring-security-web'
+  testImplementation 'edu.umd.cs.mtc:multithreadedtc'
+  testImplementation('org.springframework.data:spring-data-geode-test')
   {
     exclude group:'org.springframework.data',module:'spring-data-geode'
   }
-  api("org.slf4j:slf4j-api")
-  api("org.slf4j:jcl-over-slf4j")
-//  api("org.slf4:log4j-over-slf4j")
-  api("ch.qos.logback:logback-core:1.2.5")
-  api("ch.qos.logback:logback-classic:1.2.5")
 
-  testImplementation 'org.assertj:assertj-core:3.22.0'
-  testImplementation 'junit:junit:4.13.2'
-  testImplementation 'org.mockito:mockito-core:4.4.0'
-  testImplementation 'org.springframework:spring-test:5.3.19'
-  testImplementation 'org.springframework:spring-web:5.3.19'
-  testImplementation 'ch.qos.logback:logback-classic:1.2.5'
-  testImplementation 'org.slf4j:log4j-over-slf4j:1.7.36'
-  compileOnly 'javax.servlet:javax.servlet-api:3.1.0'
-  testCompileOnly 'javax.servlet:javax.servlet-api:3.1.0'
+  testImplementation 'org.assertj:assertj-core'
+  testImplementation 'junit:junit'
+  testImplementation 'org.mockito:mockito-core'
+  testImplementation 'org.springframework:spring-test'
+  testImplementation 'org.springframework:spring-web'
+  testImplementation 'ch.qos.logback:logback-classic'
+  testImplementation 'org.slf4j:log4j-over-slf4j'
+  compileOnly 'javax.servlet:javax.servlet-api'
+  testCompileOnly 'javax.servlet:javax.servlet-api'
 
-  integrationTestImplementation 'ch.qos.logback:logback-classic:1.2.5'
-  integrationTestImplementation 'org.apache.logging.log4j:log4j-to-slf4j:2.14.0'
-  integrationTestImplementation "com.google.code.findbugs:jsr305:3.0.2"
-  integrationTestImplementation "org.springframework.shell:spring-shell:1.2.0.RELEASE"
+  integrationTestImplementation 'junit:junit'
+  integrationTestImplementation 'org.assertj:assertj-core'
+  integrationTestImplementation 'ch.qos.logback:logback-classic'
+  integrationTestImplementation 'org.slf4j:log4j-over-slf4j'
+  integrationTestImplementation 'com.google.code.findbugs:jsr305'
+  integrationTestImplementation 'org.springframework.shell:spring-shell'
+  integrationTestImplementation 'org.springframework:spring-test'
+  integrationTestImplementation('org.springframework.data:spring-data-geode-test')
+      {
+        exclude group:'org.springframework.data',module:'spring-data-geode'
+      }
 }
 
 sourceSets {
