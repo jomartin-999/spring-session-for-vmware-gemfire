@@ -13,19 +13,22 @@ facets {
 }
 
 dependencies {
-  api ('org.springframework.session:spring-session-data-geode:2.6.1'){
+  api ('org.springframework.session:spring-session-data-geode'){
     exclude group:'org.springframework.data',module:'spring-data-geode'
   }
   api 'org.springframework:spring-context-support'
   api 'org.springframework:spring-jcl'
 
-  api 'com.vmware.gemfire:spring-data-gemfire:9.15.0-build.9999-SD26'
+  api "com.vmware.gemfire:spring-data-gemfire:$springDataGemFireVersion"
   api 'org.springframework.session:spring-session-core:2.6.3'
 
 
-  api 'com.google.code.findbugs:jsr305:3.0.2'
+  api 'com.google.code.findbugs:jsr305'
   api 'org.springframework.security:spring-security-core'
   api 'org.springframework.security:spring-security-web'
+
+  runtimeOnly "jakarta.servlet:jakarta.servlet-api"
+
   testImplementation 'edu.umd.cs.mtc:multithreadedtc'
   testImplementation('org.springframework.data:spring-data-geode-test')
   {
@@ -85,7 +88,7 @@ publishing {
     maven(MavenPublication) {
       groupId = project.group
       artifactId = 'spring-session-data-gemfire'
-      version = project.version
+      version = version+"-SD26"
 
       from components.java
     }

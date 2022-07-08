@@ -41,6 +41,7 @@ class DependencyConstraints {
     depVersionMapping.put("springSessionBomVersion","2021.1.2")
     depVersionMapping.put("multithreadedtcVersion","1.01")
     depVersionMapping.put("apacheLogging","2.14.1")
+    depVersionMapping.put("springSessionDataGeode","2.6.1")
 
     return depVersionMapping
   }
@@ -54,6 +55,9 @@ class DependencyConstraints {
 //      api(platform(group: 'io.micrometer', name: 'micrometer-bom', version: get('micrometerVersion')))
       constraints {
 
+        api(group: 'org.springframework.session',name:'spring-session-data-geode',version:get('springSessionDataGeode'))
+
+        api(group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: get('javaxServletApiVersion'))
         api(group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: get('javaxServletApiVersion'))
         api(group: 'jakarta.servlet.jsp.jstl', name: 'jakarta.servlet.jsp.jstl-api', version: get('javaxServletJspJstlApiVersion'))
         api(group: 'antlr', name: 'antlr', version: get('antlrVersion'))
