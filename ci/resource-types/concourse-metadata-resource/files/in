@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+DEST_DIR=$1
+
+SCRIPT_INPUT='/tmp/input'
+cat > $SCRIPT_INPUT <&0 # STDIN params
+
+VERSION=$(jq -r '.version.ref // ""' < $SCRIPT_INPUT)
+
+OUTPUT_STRING=$(cat <<EOF
+{ "version": { "ref": "$VERSION" },
+  "metadata": [
+    { "name": "BUILD_ID", "value": "$BUILD_ID" },
+    { "name": "BUILD_NAME", "value": "$BUILD_NAME" },
+    { "name": "BUILD_JOB_NAME", "value": "$BUILD_JOB_NAME" },
+    { "name": "BUILD_PIPELINE_NAME", "value": "$BUILD_PIPELINE_NAME" },
+    { "name": "BUILD_TEAM_NAME", "value": "$BUILD_TEAM_NAME" },
+    { "name": "ATC_EXTERNAL_URL", "value": "$ATC_EXTERNAL_URL" }
+  ]
+}
+EOF
+)
+
+echo "export BUILD_ID=$BUILD_ID" > $DEST_DIR/concourse_metadata
+echo "export BUILD_NAME=$BUILD_NAME" >> $DEST_DIR/concourse_metadata
+echo "export BUILD_JOB_NAME=$BUILD_JOB_NAME" >> $DEST_DIR/concourse_metadata
+echo "export BUILD_PIPELINE_NAME=$BUILD_PIPELINE_NAME" >> $DEST_DIR/concourse_metadata
+echo "export BUILD_TEAM_NAME=$BUILD_TEAM_NAME" >> $DEST_DIR/concourse_metadata
+echo "export ATC_EXTERNAL_URL=$ATC_EXTERNAL_URL" >> $DEST_DIR/concourse_metadata
+
+echo $OUTPUT_STRING
+
+exit 0

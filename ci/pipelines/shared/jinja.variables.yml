@@ -1,0 +1,26 @@
+repositories:
+  springSessionDataGemfire:
+    branch: 9.15_2.6
+    fork: gemfire
+    repo: spring-session-data-gemfire
+  gemfireAssembly:
+    branch: support/9.15
+    fork: gemfire
+    repo: gemfire-assembly
+  gemfireTest:
+    branch: support/9.15
+    fork: gemfire
+    repo: gemfire
+  geodeSupport:
+    branch: support/9.15
+    fork: gemfire
+    repo: geode-support
+storage:
+  artifactBucket: gemfire-test-artifacts
+  bucket: gemfire-build-resources
+java_build_version:
+  name: openjdk11
+  version: 11
+instanceSettings:
+  deleteInstance: true
+gemfireVersion: 9.15

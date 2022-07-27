@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+echo "Running concourse-metadata script" 1>&2
+
+SCRIPT_INPUT='/tmp/input'
+cat > $SCRIPT_INPUT <&0 # STDIN params
+
+OUTPUT_STRING="[ ]"
+
+echo $OUTPUT_STRING
+
+exit 0

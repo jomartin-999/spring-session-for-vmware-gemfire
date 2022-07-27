@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+SCRIPT_INPUT='/tmp/input'
+cat > $SCRIPT_INPUT <&0 # STDIN params
+
+VERSION=$(uuidgen)
+
+OUTPUT_STRING="{ \"version\": { \"ref\": \"$VERSION\" } }"
+
+echo $OUTPUT_STRING
+
+exit 0
