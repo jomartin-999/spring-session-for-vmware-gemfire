@@ -81,7 +81,7 @@ pushd ${SCRIPT_DIR} 2>&1 > /dev/null
   fly -t ${TARGET} set-pipeline \
     --pipeline ${PIPELINE_NAME} \
     --config ${SCRIPT_DIR}/generated-pipeline.yml \
-    --var spring-boot-data-gemfire-build-branch=${SANITIZED_SSDG_BRANCH} \
+    --var spring-session-data-gemfire-build-branch=${SANITIZED_SSDG_BRANCH} \
     --var pipeline-prefix=${PIPELINE_PREFIX} \
     --var gcp-project=${GCP_PROJECT} \
     --var concourse-team=${CONCOURSE_TEAM} \

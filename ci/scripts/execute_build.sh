@@ -55,5 +55,5 @@ fi
 
 SCRIPT_COMMAND="./mvnw clean install ${GEMFIRE_VERSION_ARGUMENT}"
 echo "${GRADLE_COMMAND}"
-ssh ${SSH_OPTIONS} geode@${INSTANCE_IP_ADDRESS} "set -x  && mkdir -p tmp && cd spring-boot-data-gemfire && ${SET_JAVA_HOME} && ${GRADLE_COMMAND}"
-#ssh ${SSH_OPTIONS} geode@${INSTANCE_IP_ADDRESS} "set -x  && mkdir -p tmp && cd spring-boot-data-gemfire && ${SET_JAVA_HOME} && ${SCRIPT_COMMAND}"
+ssh ${SSH_OPTIONS} geode@${INSTANCE_IP_ADDRESS} "set -x  && mkdir -p tmp && cd spring-session-data-gemfire && ${SET_JAVA_HOME} && ${GRADLE_COMMAND}"
+#ssh ${SSH_OPTIONS} geode@${INSTANCE_IP_ADDRESS} "set -x  && mkdir -p tmp && cd spring-session-data-gemfire && ${SET_JAVA_HOME} && ${SCRIPT_COMMAND}"
