@@ -19,7 +19,7 @@ dependencies {
   api 'org.springframework:spring-context-support'
   api 'org.springframework:spring-jcl'
 
-  api "com.vmware.gemfire:spring-data-gemfire:$springDataGemFireVersion"
+  api "com.vmware.gemfire:spring-data-gemfire:$gemfireBaseVersion-$springDataBaseVersion-$springDataGemFireVersion"
   api 'org.springframework.session:spring-session-core:2.6.3'
 
 
@@ -88,7 +88,7 @@ publishing {
     maven(MavenPublication) {
       groupId = project.group
       artifactId = 'spring-session-data-gemfire'
-      version = version+"-SD26"
+      version = "${gemfireBaseVersion}-${springDataBaseVersion}-${version}"
 
       from components.java
     }

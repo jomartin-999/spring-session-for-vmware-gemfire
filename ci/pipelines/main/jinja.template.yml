@@ -170,6 +170,14 @@ resources:
     paths:
     - ci/*
 
+- name: spring-data-tanzu-gemfire-build-version
+  type: semver
+  source:
+    bucket: ((artifact-bucket))
+    driver: gcs
+    json_key: ((concourse-gcp-key))
+    key: semvers/{{repositories.springDataTanzuGemfire.pipelinePrefix}}{{ repositories.springDataTanzuGemfire.branch }}/number
+
 jobs:
 # alpine-tools
 - name: build-utilities-alpine-tools-docker-image
@@ -326,6 +334,8 @@ jobs:
       params:
         pre: ((semver-prerelease-token))
     - get: linux-ssdg-builder-image-family
+    - get: spring-data-tanzu-gemfire-build-version
+      trigger: true
   - do:
     - put: concourse-metadata-resource
     - task: initial-output
@@ -434,6 +444,7 @@ jobs:
       - name: spring-session-data-gemfire
       - name: instance-data
       - name: spring-session-data-gemfire-build-version
+      - name: spring-data-tanzu-gemfire-build-version
       outputs:
       - name: built-spring-session-data-gemfire
       - name: results

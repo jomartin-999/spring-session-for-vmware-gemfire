@@ -17,6 +17,8 @@ if [[ -z "${GRADLE_TASK}" ]]; then
 fi
 
 GEMFIRE_VERSION=$(jq -r '.gemfire_test_semver'  gemfire-blessed-token/vmware-gemfire-*-passing-tokens.json)
+SDTG_VERSION=$(cat spring-data-tanzu-gemfire-build-version/number)
+VERSION=$(cat spring-session-data-gemfire-build-version/number)
 
 ROOT_DIR=$(pwd)
 BUILD_DATE=$(date +%s)
@@ -47,13 +49,21 @@ scp ${SSH_OPTIONS} gradle.properties geode@${INSTANCE_IP_ADDRESS}:.gradle/gradle
 GRADLE_COMMAND="./gradlew \
     ${DEFAULT_GRADLE_TASK_OPTIONS} \
     ${GRADLE_GLOBAL_ARGS} \
-    clean build test publishToMavenLocal"
+    clean build test publish"
 
 if [[ -n "${GEMFIRE_VERSION}" ]]; then
   GEMFIRE_VERSION_ARGUMENT="-Dtanzu.gemfire.version=${GEMFIRE_VERSION}"
 fi
 
-SCRIPT_COMMAND="./mvnw clean install ${GEMFIRE_VERSION_ARGUMENT}"
+if [[ -n "${SDTG_VERSION}" ]]; then
+  SDTG_VERSION_ARGUMENT="-PspringDataGemFireVersion=${STDG_VERSION}"
+fi
+
+if [[ -n "${VERSION}" ]]; then
+  VERSION_ARGUMENT="-Pversion=${VERSION}"
+fi
+
+SCRIPT_COMMAND="./mvnw clean install ${GEMFIRE_VERSION_ARGUMENT} ${SDTG_VERSION_ARGUMENT} ${VERSION_ARGUMENT}"
 echo "${GRADLE_COMMAND}"
 ssh ${SSH_OPTIONS} geode@${INSTANCE_IP_ADDRESS} "set -x  && mkdir -p tmp && cd spring-session-data-gemfire && ${SET_JAVA_HOME} && ${GRADLE_COMMAND}"
 #ssh ${SSH_OPTIONS} geode@${INSTANCE_IP_ADDRESS} "set -x  && mkdir -p tmp && cd spring-session-data-gemfire && ${SET_JAVA_HOME} && ${SCRIPT_COMMAND}"
