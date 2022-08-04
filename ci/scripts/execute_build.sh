@@ -46,11 +46,6 @@ EOF
 ssh ${SSH_OPTIONS} geode@${INSTANCE_IP_ADDRESS} "set -x && mkdir -p /home/geode/.gradle"
 scp ${SSH_OPTIONS} gradle.properties geode@${INSTANCE_IP_ADDRESS}:.gradle/gradle.properties
 
-GRADLE_COMMAND="./gradlew \
-    ${DEFAULT_GRADLE_TASK_OPTIONS} \
-    ${GRADLE_GLOBAL_ARGS} \
-    clean build test publish ${SDTG_VERSION_ARGUMENT} ${VERSION_ARGUMENT}"
-
 if [[ -n "${GEMFIRE_VERSION}" ]]; then
   GEMFIRE_VERSION_ARGUMENT="-Dtanzu.gemfire.version=${GEMFIRE_VERSION}"
 fi
@@ -62,6 +57,12 @@ fi
 if [[ -n "${VERSION}" ]]; then
   VERSION_ARGUMENT="-Pversion=${VERSION}"
 fi
+
+GRADLE_COMMAND="./gradlew \
+    ${DEFAULT_GRADLE_TASK_OPTIONS} \
+    ${GRADLE_GLOBAL_ARGS} \
+    clean build test publish ${SDTG_VERSION_ARGUMENT} ${VERSION_ARGUMENT}"
+
 
 SCRIPT_COMMAND="./mvnw clean install ${GEMFIRE_VERSION_ARGUMENT} "
 echo "${GRADLE_COMMAND}"
