@@ -25,7 +25,7 @@ storage:
   bucket: gemfire-build-resources
 java_build_version:
   name: openjdk11
-  version: 11
+  version: 8
 instanceSettings:
   deleteInstance: true
 gemfireVersion: 9.15

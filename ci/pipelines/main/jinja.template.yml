@@ -436,6 +436,7 @@ jobs:
         COMMERCIAL_REPO_PASSWORD: ((commercial-repo-password))
         ORG_GRADLE_PROJECT_mavenPassword: ((pivotal-repo-password))
         ORG_GRADLE_PROJECT_mavenUser: ((pivotal-repo-username))
+        SDTG_ARTIFACT_PREFIX: {{ repositories.springDataTanzuGemfire.branch }}
       run:
         path: spring-session-data-gemfire-ci/ci/scripts/execute_build.sh
       inputs:

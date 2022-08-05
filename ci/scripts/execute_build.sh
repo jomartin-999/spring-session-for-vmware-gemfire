@@ -16,8 +16,14 @@ if [[ -z "${GRADLE_TASK}" ]]; then
   exit 1
 fi
 
+if [[ -z "${SDTG_ARTIFACT_PREFIX}" ]]; then
+  echo "SDTG_ARTIFACT_PREFIX must be set. exiting ... "
+  exit 1
+fi
+
 GEMFIRE_VERSION=$(jq -r '.gemfire_test_semver'  gemfire-blessed-token/vmware-gemfire-*-passing-tokens.json)
 SDTG_VERSION=$(cat spring-data-tanzu-gemfire-build-version/number)
+
 VERSION=$(cat spring-session-data-gemfire-build-version/number)
 
 ROOT_DIR=$(pwd)
@@ -51,7 +57,7 @@ if [[ -n "${GEMFIRE_VERSION}" ]]; then
 fi
 
 if [[ -n "${SDTG_VERSION}" ]]; then
-  SDTG_VERSION_ARGUMENT="-PspringDataGemFireVersion=${SDTG_VERSION}"
+  SDTG_VERSION_ARGUMENT="-PspringDataGemFireVersion=${SDTG_ARTIFACT_PREFIX}-${SDTG_VERSION}"
 fi
 
 if [[ -n "${VERSION}" ]]; then
