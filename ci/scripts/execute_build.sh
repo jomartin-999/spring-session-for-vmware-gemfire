@@ -53,11 +53,11 @@ ssh ${SSH_OPTIONS} geode@${INSTANCE_IP_ADDRESS} "set -x && mkdir -p /home/geode/
 scp ${SSH_OPTIONS} gradle.properties geode@${INSTANCE_IP_ADDRESS}:.gradle/gradle.properties
 
 if [[ -n "${GEMFIRE_VERSION}" ]]; then
-  GEMFIRE_VERSION_ARGUMENT="-Dtanzu.gemfire.version=${SDTG_ARTIFACT_PREFIX}-${GEMFIRE_VERSION}"
+  GEMFIRE_VERSION_ARGUMENT="-Dtanzu.gemfire.version=${GEMFIRE_VERSION}"
 fi
 
 if [[ -n "${SDTG_VERSION}" ]]; then
-  SDTG_VERSION_ARGUMENT="-PspringDataGemFireVersion=${SDTG_VERSION}"
+  SDTG_VERSION_ARGUMENT="-PspringDataGemFireVersion=${SDTG_ARTIFACT_PREFIX}-${SDTG_VERSION}"
 fi
 
 if [[ -n "${VERSION}" ]]; then
