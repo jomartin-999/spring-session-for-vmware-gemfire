@@ -42,6 +42,7 @@ class DependencyConstraints {
     depVersionMapping.put("multithreadedtcVersion","1.01")
     depVersionMapping.put("apacheLogging","2.14.1")
     depVersionMapping.put("springSessionDataGeode","2.6.1")
+    depVersionMapping.put("jsr305Version","2.6.1")
 
     return depVersionMapping
   }
@@ -69,7 +70,7 @@ class DependencyConstraints {
         api(group: 'org.apache.taglibs', name: 'taglibs-standard-jstlel', version: get('apacheTaglibsVersion'))
         api(group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version: get('apacheTaglibsVersion'))
         api(group: 'org.assertj', name: 'assertj-core', version: get('assertjVersion'))
-        api(group: 'org.mockito', 'name:mockito-core', version: get('mockitoVersion'))
+        api(group: 'org.mockito', name: 'mockito-core', version: get('mockitoVersion'))
         api(group: 'org.seleniumhq.selenium', name: 'htmlunit-driver', version: get('seleniumHTMLDriverVersion'))
         api(group: 'org.slf4j', name: 'slf4j-api', version: get('slf4jVersion'))
         api(group: 'org.slf4j', name: 'jcl-over-slf4j', version: get('slf4jVersion'))
@@ -92,6 +93,7 @@ class DependencyConstraints {
         api(group: 'org.seleniumhq.selenium', name: 'selenium-remote-driver', version: get('seleniumVersion'))
         api(group: 'org.seleniumhq.selenium', name: 'selenium-support', version: get('seleniumVersion'))
         api(group: 'edu.umd.cs.mtc', name: 'multithreadedtc', version: get('multithreadedtcVersion'))
+        api(group: 'com.google.code.findbugs', name: 'jsr305', version: get('jsr305Version'))
       }
     }
   }

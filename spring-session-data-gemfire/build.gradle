@@ -91,6 +91,11 @@ publishing {
       version = "${gemfireBaseVersion}-${springDataBaseVersion}-${version}"
 
       from components.java
+
+      pom {
+        name = 'Spring Session Data Tanzu GemFire   '
+        description = 'Spring Session Data For VMware Tanzu GemFire'
+      }
     }
   }
   repositories {

@@ -6,6 +6,6 @@ pluginManagement {
 
 rootProject.name = 'spring-session-data-gemfire'
 include(':spring-session-data-gemfire-parent')
-include(':spring-session-data-gemfire-main')
+include(':spring-session-data-gemfire')
 
 

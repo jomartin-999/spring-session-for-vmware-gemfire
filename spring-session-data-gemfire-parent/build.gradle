@@ -7,10 +7,15 @@ publishing {
   publications {
     maven(MavenPublication) {
       groupId = project.group
-      artifactId = project.name
-      version = project.version
+      artifactId = 'spring-session-data-gemfire-parent'
+      version = "${gemfireBaseVersion}-${springDataBaseVersion}-${version}"
 
       from components.java
+
+      pom {
+        name = 'Spring Session Data Tanzu GemFire Parent Project'
+        description = 'Spring Session Data For VMware Tanzu GemFire Parent project'
+      }
     }
   }
 }
