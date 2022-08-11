@@ -37,7 +37,7 @@ class DependencyConstraints {
     depVersionMapping.put("springDataCommonsVersion","2.6.4")
     depVersionMapping.put("springDataGeodeVersion","2.6.4")
     depVersionMapping.put("sdgtVersion","0.2.2-Q")
-    depVersionMapping.put("springSessionVersion","2.6.4-SNAPSHOT")
+    depVersionMapping.put("springSessionVersion","2.6.3")
     depVersionMapping.put("springSessionBomVersion","2021.1.2")
     depVersionMapping.put("multithreadedtcVersion","1.01")
     depVersionMapping.put("apacheLogging","2.14.1")
