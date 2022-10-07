@@ -42,8 +42,8 @@ dependencies {
   testImplementation 'org.springframework:spring-web'
   testImplementation 'ch.qos.logback:logback-classic'
   testImplementation 'org.slf4j:log4j-over-slf4j'
-  compileOnly 'javax.servlet:javax.servlet-api'
-  testCompileOnly 'javax.servlet:javax.servlet-api'
+  compileOnly 'jakarta.servlet:jakarta.servlet-api'
+  testCompileOnly 'jakarta.servlet:jakarta.servlet-api'
 
   integrationTestImplementation 'junit:junit'
   integrationTestImplementation 'org.assertj:assertj-core'
