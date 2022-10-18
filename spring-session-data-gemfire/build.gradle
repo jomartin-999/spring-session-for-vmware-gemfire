@@ -19,7 +19,7 @@ dependencies {
   api 'org.springframework:spring-context-support'
   api 'org.springframework:spring-jcl'
 
-  api "com.vmware.gemfire:spring-data-gemfire:$springDataGemFireVersion"
+  api "com.vmware.gemfire:spring-data-gemfire-${gemfireBaseVersion}:$springDataGemFireVersion"
   api 'org.springframework.session:spring-session-core:2.6.3'
 
 
@@ -81,20 +81,19 @@ sourceSets {
   }
 }
 
-description = 'Spring Session Data for Tanzu GemFire'
+description = 'Spring Session for VMware GemFire'
 
 publishing {
   publications {
     maven(MavenPublication) {
       groupId = project.group
-      artifactId = 'spring-session-data-gemfire'
-      version = "${gemfireBaseVersion}-${springDataBaseVersion}-${version}"
+      artifactId = "spring-session-gemfire-${gemfireBaseVersion}"
 
       from components.java
 
       pom {
-        name = 'Spring Session Data Tanzu GemFire   '
-        description = 'Spring Session Data For VMware Tanzu GemFire'
+        name = 'Spring Session VMware GemFire   '
+        description = 'Spring Session For VMware GemFire'
       }
     }
   }
