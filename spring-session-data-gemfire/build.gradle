@@ -4,7 +4,13 @@ plugins {
   id "io.freefair.lombok" version "5.3.0"
   id 'nebula.facet' version "9.6.3"
   id 'dependency-constraints'
+  id 'gemfire-repo-artifact-publishing'
+  id 'spring-java-jar'
 }
+
+project.ext.set("pomProjectLongName","Spring Session VMware GemFire")
+project.ext.set("pomProjectArtifactName","spring-session-gemfire")
+project.ext.set("pomProjectDescription","Spring Session For VMware GemFire")
 
 facets {
   integrationTest {
@@ -83,29 +89,8 @@ sourceSets {
 
 description = 'Spring Session for VMware GemFire'
 
-publishing {
-  publications {
-    maven(MavenPublication) {
-      groupId = project.group
-      artifactId = "spring-session-gemfire-${gemfireBaseVersion}"
-
-      from components.java
-
-      pom {
-        name = 'Spring Session VMware GemFire   '
-        description = 'Spring Session For VMware GemFire'
-      }
-    }
-  }
-  repositories {
-    maven {
-      url = uri('gcs://gemfire-build-resources/maven/gemfire')
-    }
-  }
-}
 
 task copySpringTestClasses(type: Exec) {
-  dependsOn(":spring-session-data-gemfire-parent:cleanSpringTestClasses")
   workingDir "${rootProject.rootDir}/scripts"
   commandLine 'chmod', '+x', 'copySSDGTestResources.sh'
   if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
@@ -121,7 +106,6 @@ task cleanSpringTestResources(type: Exec) {
 }
 
 clean {
-  dependsOn(":spring-session-data-gemfire-parent:cleanSpringTestClasses")
   dependsOn("cleanSpringTestResources")
 }
 
