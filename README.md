@@ -10,8 +10,8 @@ This project builds on the great work already provided by [Spring Session for Ap
 ## Project Structure
 The current project structure is different to normal projects, as it does not have a `main` or `develop` branch with meaningful code in it. This is because there is no "common" code branch, as this project is a combination of VMware GemFire and Spring Session. Thus all code contributions will be found under different branches.
 Current branches are:
-* [9.15 - Spring Session 2.6](https://github.com/gemfire/spring-session-data-for-vmware-gemfire/tree/9.15-SD26)
-* [9.15 - Spring Session 2.7](https://github.com/gemfire/spring-session-data-for-vmware-gemfire/tree/9.15-SD27)
+* [9.15 - Spring Session 2.6](https://github.com/gemfire/spring-session-data-for-vmware-gemfire/tree/9.15-2.6)
+* [9.15 - Spring Session 2.7](https://github.com/gemfire/spring-session-data-for-vmware-gemfire/tree/9.15-2.7)
 
 ## Versioning
 As this project provides an integration between two great products, a versioning schema that adequately represents both products was chosen. The major.minor version component of the GemFire product will be added to the artifact id. The major.minor component from the Spring Data project will be use as the major.minor component of the Spring Data For VMware GemFire version. The patch version of the Spring Data For VMware GemFire project, will be independent of the two projects and will be incremented each time there is a patch version update in either project or there are bug fixes in the Spring Data For VMware GemFire project. 
