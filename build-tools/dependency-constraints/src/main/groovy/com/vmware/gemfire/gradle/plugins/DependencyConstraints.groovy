@@ -71,6 +71,7 @@ class DependencyConstraints {
         api(group: 'org.slf4j', name: 'jcl-over-slf4j', version: get('slf4jVersion'))
         api(group: 'org.slf4j', name: 'log4j-over-slf4j', version: get('slf4jVersion'))
         api(group: 'org.springframework.data', name: 'spring-data-geode-test', version: get('sdgtVersion'))
+        api(group: 'org.springframework', name: 'spring-tx', version: get('springVersion'))
         api(group: 'org.springframework.security', name: 'spring-security-test', version: get('springSecurityVersion'))
         api(group: 'org.springframework.security', name: 'spring-security-web', version: get('springSecurityVersion'))
         api(group: 'org.springframework.session', name: 'spring-session-core', version: get('springSessionVersion'))

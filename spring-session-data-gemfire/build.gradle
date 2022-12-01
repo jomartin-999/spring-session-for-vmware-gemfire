@@ -29,7 +29,7 @@ dependencies {
   implementation 'org.springframework.security:spring-security-core'
   implementation 'org.springframework.security:spring-security-web'
 
-  implementation 'org.springframework:spring-tx:5.3.24'
+  implementation 'org.springframework:spring-tx'
 
   runtimeOnly "jakarta.servlet:jakarta.servlet-api"
 
