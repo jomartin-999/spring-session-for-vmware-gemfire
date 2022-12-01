@@ -19,15 +19,17 @@ facets {
 }
 
 dependencies {
-  api 'org.springframework:spring-context-support'
-  api 'org.springframework:spring-jcl'
+  implementation 'org.springframework:spring-context-support'
+  implementation 'org.springframework:spring-jcl'
 
   api "com.vmware.gemfire:spring-data-2.6-gemfire-${gemfireBaseVersion}:$springDataGemFireVersion"
-  api 'org.springframework.session:spring-session-core'
+  implementation 'org.springframework.session:spring-session-core'
 
-  api 'com.google.code.findbugs:jsr305'
-  api 'org.springframework.security:spring-security-core'
-  api 'org.springframework.security:spring-security-web'
+  implementation 'com.google.code.findbugs:jsr305'
+  implementation 'org.springframework.security:spring-security-core'
+  implementation 'org.springframework.security:spring-security-web'
+
+  implementation 'org.springframework:spring-tx:5.3.24'
 
   runtimeOnly "jakarta.servlet:jakarta.servlet-api"
 

@@ -35,16 +35,14 @@ class DependencyConstraints {
     depVersionMapping.put("springSecurityVersion", "5.6.9")
     depVersionMapping.put("springShellVersion", "1.2.0.RELEASE")
     depVersionMapping.put("findbugsVersion","3.0.2")
-    depVersionMapping.put("springVersion","5.3.23")
-    depVersionMapping.put("springBootVersion","2.6.6")
+    depVersionMapping.put("springVersion","5.3.24")
+    depVersionMapping.put("springBootVersion","2.6.14")
     depVersionMapping.put("springDataBomVersion","2021.1.7")
-    depVersionMapping.put("springDataCommonsVersion","2.6.7")
-    depVersionMapping.put("springDataGeodeVersion","2.6.7")
-    depVersionMapping.put("sdgtVersion","0.2.2-Q")
+    depVersionMapping.put("springDataCommonsVersion","2.6.10")
+    depVersionMapping.put("sdgtVersion","0.2.3-Q")
     depVersionMapping.put("springSessionVersion","2.6.3")
     depVersionMapping.put("multithreadedtcVersion","1.01")
     depVersionMapping.put("apacheLogging","2.14.1")
-    depVersionMapping.put("springSessionDataGeode","2.6.1")
     depVersionMapping.put("jsr305Version","3.0.2")
 
     return depVersionMapping
@@ -55,12 +53,7 @@ class DependencyConstraints {
     project.dependencies {
       api(platform(group: 'org.springframework', name: 'spring-framework-bom', version: get('springVersion')))
       api(platform(group: 'org.springframework.security', name: 'spring-security-bom', version: get('springSecurityVersion')))
-      api(platform(group: 'org.springframework.data', name: 'spring-data-bom', version: get('springDataBomVersion')))
-//      api(platform(group: 'io.micrometer', name: 'micrometer-bom', version: get('micrometerVersion')))
       constraints {
-
-        api(group: 'org.springframework.session',name:'spring-session-data-geode',version:get('springSessionDataGeode'))
-
         api(group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: get('javaxServletApiVersion'))
         api(group: 'jakarta.servlet.jsp.jstl', name: 'jakarta.servlet.jsp.jstl-api', version: get('javaxServletJspJstlApiVersion'))
         api(group: 'antlr', name: 'antlr', version: get('antlrVersion'))
