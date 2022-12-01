@@ -60,6 +60,10 @@ dependencies {
       }
 }
 
+tasks.named("processIntegrationTestResources") {
+  duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
 sourceSets {
   integrationTest {
     java {
