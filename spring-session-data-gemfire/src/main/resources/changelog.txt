@@ -1,0 +1,684 @@
+SPRING SESSION FOR APACHE GEODE & PIVOTAL GEMFIRE CHANGELOG
+-----------------------------------------------------------
+https://github.com/spring-projects/spring-session-data-geode
+============================================================
+
+
+Changes in version 2.6.2 (2022-09-23)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.6.3.
+
+* Upgrades to Spring Framework 5.3.23.
+* Upgrades to Spring Boot 2.6.12.
+* Upgrades to Spring Data BOM 2021.1.7 (Q-SR7).
+* Upgrades to Spring Data Commons 2.6.7.
+* Upgrades to Spring Data for Apache Geode 2.6.7.
+* Upgrades to Spring Security 5.6.7.
+* Upgrades to Spring Session 2.6.3.
+* Upgrades to Spring Session BOM 2021.1.3.
+* Upgrades to Spring Test for Apache Geode 0.2.3-Q.
+* Upgrades to Apache Log4j 2.19.0.
+* Upgrades to AssertJ 3.23.1.
+
+
+Changes in version 2.6.1 (2022-03-23)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.6.2.
+
+* Upgrades to Apache Geode 1.14.4
+* Upgrades to Spring Framework 5.3.17.
+* Upgrades to Spring Boot 2.6.4.
+* Upgrades to Spring Data BOM 2021.1.3 (Q-SR3).
+* Upgrades to Spring Data Commons 2.6.3.
+* Upgrades to Spring Data for Apache Geode 2.6.3.
+* Upgrades to Spring Security 5.6.2.
+* Upgrades to Spring Session 2.6.2.
+* Upgrades to Spring Session BOM 2021.1.2.
+* Upgrades to Spring Test for Apache Geode 0.2.2-Q.
+* Upgrades to Javax (Jakarta) Servlet API 4.0.4.
+* Upgrades to Javax (Jakarta) Servlet JSP JSTL API  1.2.7.
+* Upgrades to Log4j 2.17.2.
+* Upgrades to Mockito 4.4.0.
+* Upgrades to Selenium HtmlUnit 2.55.0.
+* Upgrades to SLF4J 1.7.36.
+* Switches the use from Javax Servlet dependencies to Jakarta Servlet dependencies.
+
+
+Changes in version 2.5.6 (2022-03-23)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.5.5.
+
+* Upgrades to Apache Geode 1.13.8.
+* Upgrades to Spring Framework 5.3.17.
+* Upgrades to Spring Boot 2.5.10.
+* Upgrades to Spring Data BOM 2021.0.10 (Pascal-SR10).
+* Upgrades to Spring Data Commons 2.5.10.
+* Upgrades to Spring Data for Apache Geode 2.5.10.
+* Upgrades to Spring Security 5.5.5.
+* Upgrades to Spring Session 2.5.5.
+* Upgrades to Spring Session BOM 2021.0.5.
+* Upgrades to Spring Test for Apache Geode 0.1.2-PASCAL.
+* Upgrades to Javax (Jakarta) Servlet API 4.0.4.
+* Upgrades to Javax (Jakarta) Servlet JSP JSTL API  1.2.7.
+* Upgrades to Log4j 2.17.2.
+* Upgrades to Mockito 4.4.0.
+* Upgrades to SLF4J 1.7.36.
+* Switches the use from Javax Servlet dependencies to Jakarta Servlet dependencies.
+
+
+Changes in version 2.6.0 (2021-11-16)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.6.0.
+
+* Upgrades to Spring Framework 5.3.13.
+* Upgrades to Spring Boot 2.6.0-RC1.
+* Upgrades to Spring Data BOM 2021.1.0 (Q).
+* Upgrades to Spring Data Commons 2.6.0.
+* Upgrades to Spring Data for Apache Geode 2.6.0.
+* Upgrades to Spring Security 5.6.0.
+* Upgrades to Spring Session 2.6.0.
+
+
+Changes in version 2.6.0-RC1 (2021-10-20)
+-----------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.6.0-RC1.
+
+* Upgrades to Apache Geode 1.14.0.
+* Upgrades to AssertJ 3.21.0.
+* upgrades to Mockito 4.0.0.
+* Upgrades to SLF4J 1.7.32.
+* Upgrades to Spring Framework 5.3.11.
+* Upgrades to Spring Boot 2.6.0-M3.
+* Upgrades to Spring Data BOM 2021.1.0 (Q-RC1).
+* Upgrades to Spring Data Commons 2.6.0-RC1.
+* Upgrades to Spring Data for Apache Geode 2.6.0-RC1.
+* Upgrades to Spring Security 5.6.0-RC1.
+* Upgrades to Spring Session 2.6.0-RC1.
+
+
+Changes in version 2.5.5 (2021-10-20)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.5.3.
+
+* Upgrades to AssertJ 3.21.0.
+* Upgrades to Gradle 6.9.1.
+* upgrades to Mockito 4.0.0.
+* Upgrades to Spring Framework 5.3.11.
+* Upgrades to Spring Boot 2.5.5.
+* Upgrades to Spring Data BOM 2021.0.6 (Pascal-SR6).
+* Upgrades to Spring Data Commons 2.5.6
+* Upgrades to Spring Data for Apache Geode 2.5.6.
+* Upgrades to Spring Session 2.5.3.
+* Upgrades to Spring Session BOM 2021.0.2.
+* Upgrades to Spring Test for Apache Geode 0.0.26.
+
+
+Changes in version 2.4.8 (2021-10-20)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.4.6.
+
+* Upgrades to Spring Framework 5.3.11.
+* Upgrades to Spring Boot 2.4.11.
+* Upgrades to Spring Data BOM 2020.0.12 (Ockham-SR13).
+* Upgrades to Spring Data Commons 2.4.13.
+* Upgrades to Spring Data for Apache Geode 2.4.13.
+* Upgrades to Spring Session 2.4.6.
+
+
+Changes in version 2.5.4 (2021-08-17)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.5.2.
+
+* Upgrades to AssertJ 3.20.2.
+* Upgrades to Mockito 3.11.2.
+* Upgrades to SLF4J 1.7.31.
+* Upgrades to Spring Data BOM 2021.0.4 (Pascal-SR4).
+* Upgrades to Spring Data Commons 2.5.4.
+* Upgrades to Spring Data for Apache Geode 2.5.4.
+* Upgrades to Spring Security 5.5.2.
+
+
+Changes in version 2.4.7 (2021-08-17)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.4.5.
+
+* Upgrades to Spring Data BOM 2020.0.12 (Ockham-SR12).
+* Upgrades to Spring Data Commons 2.4.12.
+* Upgrades to Spring Data for Apache Geode 2.4.12.
+
+
+Changes in version 2.6.0-M1 (2021-08-17)
+----------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.6.0-M1.
+
+* Upgrades to Apache Geode 1.13.4.
+* Upgrades to AsssertJ 3.20.2.
+* Upgrades to Mockito 3.11.2.
+* Upgrades to SLF4J 1.7.31.
+* Upgrades to Spring Build Conventions Gradle Plugin 0.0.38.
+* Upgrades to Spring Framework 5.3.9.
+* Upgrades to Spring Boot 2.6.0-M1.
+* Upgrades to Spring Data BOM 2021.1.0-M2 (Q-M2).
+* Upgrades to Spring Data Commons 2.6.0-M2.
+* Upgrades to Spring Data for Apache Geode 2.6.0-M2.
+* Upgrades to Spring Security 5.6.0-M2.
+* Upgrades to Spring Session 2.6.0-M1.
+* Upgrades to Spring Session BOM 2021.1.0-SNAPSHOT.
+
+
+Changes in version 2.5.3 (2021-08-17)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.5.2.
+
+* Upgrades to Apache Geode 1.13.4.
+* Upgrades to Spring Framework 5.3.9.
+* Upgrades to Spring Boot 2.5.3.
+* Upgrades to Spring Data BOM 2021.0.3 (Pascal-SR3).
+* Upgrades to Spring Data Commons 2.5.3.
+* Upgrades to Spring Data for Apache Geode 2.5.3.
+* Upgrades to Spring Session 2.5.2.
+* Upgrades to Spring Session BOM 2021.0.1.
+* Upgrades to Spring Build Conventions Gradle Plugin 0.0.38.
+
+
+Changes in version 2.4.6 (2021-08-17)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.4.5.
+
+* Upgrades to Apache Geode 1.13.4.
+* Upgrades to Spring Framework 5.3.9.
+* Upgrades to Spring Boot 2.4.9.
+* Upgrades to Spring Data BOM 2020.0.11 (Ockham-SR11).
+* Upgrades to Spring Data Commons 2.4.11.
+* Upgrades to Spring Data for Apache Geode 2.4.11.
+* Upgrades to Spring Session 2.4.5.
+* Upgrades to Spring Session BOM 2020.0.5.
+* Upgrades to Spring Build Conventions Gradle Plugin 0.0.38.
+
+
+Changes in version 2.5.2 (2021-06-22)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.5.1.
+
+* Upgrades to Spring Data BOM 2021.0.2 (Pascal-SR2).
+* Upgrades to Spring Data Commons 2.5.2.
+* Upgrades to Spring Data for Apache Geode 2.5.2.
+* Upgrades to Spring Session 2.5.1.
+
+
+Changes in version 2.4.5 (2021-06-22)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session (core) 2.4.4.
+
+* Upgrades to Spring Data BOM 2020.0.10 (Ockham-SR10).
+* Upgrades to Spring Data Commons 2.4.10.
+* Upgrades to Spring Data for Apache Geode 2.4.10.
+* Upgrades to Spring Session 2.4.4.
+
+
+Changes in version 2.5.1 (2021-06-11)
+-------------------------------------
+Improves Spring Session for Apache Geode's (SSDG) support on the server-side. Additionally adds support to optionally
+configure SSDG via a Spring PropertySource using spring-session.properties on the application classpath.
+
+* Enables SSDG to dynamically determine, at runtime, per invocation whether GemFire/Geode Data Serialization with Deltas
+is enabled to de/serialize (HTTP) Session state.
+Resolves https://github.com/spring-projects/spring-session-data-geode/issues/54.
+* Upgrades to Gradle 6.9.
+* Upgrades to Mockito 3.11.1.
+* Upgrades to Spring Framework 5.3.8.
+* Upgrades to Spring Boot 2.5.1.
+* Upgrades to Spring Session BOM 2021.0.0.
+
+
+Changes in version 2.4.4 (2021-06-11)
+-------------------------------------
+Improves Spring Session for Apache Geode's (SSDG) support on the server-side.
+
+* Enables SSDG to dynamically determine, at runtime, per invocation whether GemFire/Geode Data Serialization with Deltas
+is enabled to de/serialize (HTTP) Session state.
+Resolves https://github.com/spring-projects/spring-session-data-geode/issues/54.
+* Upgrades to Javax Servlet JSP JSTL 1.2.2.
+* Upgrades to Gradle 6.9
+* Upgrades to Spring Framework 5.3.8.
+* Upgrades to Spring Boot 2.4.7.
+* Upgrades to Spring Data BOM 2020.0.9 (Ockham-SR9).
+* Upgrades to Spring Data Commons 2.4.9.
+* Upgrades to Spring Data for Apache Geode 2.4.9.
+* Upgrades to Spring Session BOM 2020.0.4.
+
+
+Changes in version 2.3.6.RELEASE (2021-06-11)
+---------------------------------------------
+Improves Spring Session for Apache Geode's (SSDG) support on the server-side.
+
+* Enables SSDG to dynamically determine, at runtime, per invocation whether GemFire/Geode Data Serialization with Deltas
+is enabled to de/serialize (HTTP) Session state.
+Resolves https://github.com/spring-projects/spring-session-data-geode/issues/54.
+* Upgrades to Javax Servlet JSP JSTL 1.2.2.
+* Upgrades to Apache Geode 1.12.2.
+* Upgrades to Gradle 6.9.
+* Upgrades to VMware Tanzu (Pivotal) GemFire 9.10.7.
+* Upgrades to Spring Framework 5.2.15.RELEASE.
+* Upgrades to Spring Boot 2.3.12.RELEASE.
+* Upgrades to Spring Session BOM Dragonfruit SR-3.
+
+
+Changes in version 2.5.0 GA (2021-05-18)
+----------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session 2.5.
+
+* Upgrades to Spring Framework 5.3.7.
+* Upgrades to Spring Boot 2.5.0-RC1.
+* Upgrades to Spring Data BOM 2021.0.1 (Pascal-SR1).
+* Upgrades to Spring Data Commons 2.5.1.
+* Upgrades to Spring Data for Apache Geode 2.5.1.
+* Upgrades to Spring Session core 2.5.0.
+
+
+Changes in version 2.5.0-RC1 (2021-04-14)
+-----------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session 2.5-RC1.
+
+* Upgrades to Gradle 6.8.3.
+* Upgrades to Apache Geode 1.13.2.
+* Upgrades to Spring Framework 5.3.6.
+* Upgrades to Spring Boot 2.5.0-M3.
+* Upgrades to Spring Data BOM 2021.0.0 (Pascal-RELEASE).
+* Upgrades to Spring Data Commons 2.5.0.
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.5.0.
+* Upgrades to Spring Session core 2.5.0-RC1.
+* Upgrades to Spring Test for Apache Geode 0.0.25.
+
+
+Changes in version 2.4.3 (2021-04-14)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session 2.4.3.
+
+* Upgrades to Gradle 6.8.3.
+* Upgrades to Apache Geode 1.13.2.
+* Upgrades to Spring Framework 5.3.6.
+* Upgrades to Spring Boot 2.4.4.
+* Upgrades to Spring Data BOM 2020.0.8 (Ockham-SR8).
+* Upgrades to Spring Data Commons 2.4.8.
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.4.8.
+* Upgrades to Spring Session core 2.4.3.
+* Upgrades to Spring Test for Apache Geode 0.0.24.
+
+
+Changes in version 2.3.5.RELEASE (2021-04-14)
+---------------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session 2.3.3.RELEASE.
+
+* Upgrades to Gradle 6.8.3.
+* Upgrades to Apache Geode 1.12.1.
+* Upgrades to Spring Framework 5.2.14.RELEASE.
+* Upgrades to Spring Data Commons 2.3.9.RELEASE
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.3.9.RELEASE.
+* Upgrades to Spring Data Release Train (BOM) Neumann-SR9.
+* Upgrades to Spring Session core 2.3.3.RELEASE.
+
+
+Changes in version 2.2.8.RELEASE (2021-04-14)
+---------------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with Spring Session 2.2.6.RELEASE.
+
+* Upgrades to Spring Framework 5.2.14.RELEASE.
+* Upgrades to Spring Boot 2.2.13.RELEASE.
+* Upgrades to Spring Data Commons 2.2.13.RELEASE.
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.2.13.RELEASE.
+* Upgrades to Spring Data Release Train (BOM) Moore-SR13.
+* Upgrades to Spring Session core 2.2.6.RELEASE.
+* Upgrades to Spring Session BOM Corn-SR5.
+
+
+Changes in version 2.4.2 (2021-02-12)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with the latest GA versions of Spring Framework 5.3, Spring Boot 2.4,
+Spring Data Ockham/2.4 and Spring Session 2.4.
+
+* Upgrades to Gradle 6.8.2.
+* Upgrades to Spring Build Conventions Gradle Plugin 0.0.37.
+* Upgrades to Spring Framework 5.3.4.
+* Upgrades to Spring Boot 2.4.3.
+* Upgrades to Spring Data 2020.0.5 / Ockham-SR5
+* Upgrades to Spring Data Commons 2.4.5
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.4.5.
+* Upgrades to Spring Session 2.4.2.
+* Upgrades to Spring Session BOM 2020.0.3.
+* Upgrades to Spring Test for Apache Geode 0.0.22.
+
+
+Changes in version 2.3.4.RELEASE (2021-02-12)
+---------------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with the latest GA versions of Spring Framework 5.2, Spring Boot 2.3,
+Spring Data Neumann/2.3 and Spring Session 2.3.
+
+* Upgrades to Gradle 6.8.2.
+* Upgrades to Spring Build Conventions Gradle Plugin 0.0.37.
+* Upgrades to Spring Framework 5.2.13.RELEASE.
+* Upgrades to Spring Boot 2.3.9.RELEASE.
+* Upgrades to Spring Data Neumann-SR7.
+* Upgrades to Spring Data Commons 2.3.7.RELEASE.
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.3.7.RELEASE.
+* Upgrades to Spring Session 2.3.2.RELEASE.
+* Upgrades to Spring Session BOM Dragonfruit-SR2.
+
+
+Changes in version 2.5.0-M1 (2021-01-19)
+----------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with the latest GA versions of Spring Framework 5.3, Spring Boot 2.4,
+Spring Data Pascal/2.5 and Spring Session 2.5.
+
+* Adds AbstractCookieSerializer and AbstractHttpSessionIdResolver base classes to simplify the implementation of
+the Spring Session core CookieSerializer and HttpSessionIdResolver interfaces.
+* Fixes bug in Spring Session (core) infrastructure component initialization.
+Resolves https://github.com/spring-projects/spring-session-data-geode/issues/51.
+* Upgrades to Gradle 6.8.
+* Upgrades to Spring Framework 5.3.3.
+* Upgrades to Spring Boot 2.4.2.
+* Upgrades to Spring Data BOM 2021.0.0-M1/Pascal-M1.
+* Upgrades to Spring Data Commons 2.5.0-M1.
+* Upgrades to Spring Data for Apache Geode 2.5.0-M1.
+* Upgrades to Spring Session (core) 2.5.0-M1.
+* Upgrades to Spring Session BOM 2021.0.0.
+
+
+Changes in version 2.4.1 (2021-01-12)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with the latest GA versions of Spring Framework 5.3, Spring Boot 2.4,
+Spring Data Ockham/2.4 and Spring Session 2.4.
+
+* Adds AbstractCookieSerializer and AbstractHttpSessionIdResolver base classes to simplify the implementation of
+the Spring Session core CookieSerializer and HttpSessionIdResolver interfaces.
+* Fixes bug in Spring Session (core) infrastructure component initialization.
+Resolves https://github.com/spring-projects/spring-session-data-geode/issues/51.
+* Upgrades to Gradle 6.8.
+* Upgrades to Spring Framework 5.3.3.
+* Upgrades to Spring Boot 2.4.1.
+* Upgrades to Spring Data BOM 2020.0.2/Ockham-SR2.
+* Upgrades to Spring Data Commons 2.4.2.
+* Upgrades to Spring Data for Apache Geode 2.4.2
+* Upgrades to Spring Session (core) 2.4.1.
+* Upgrades to Spring Session BOM 2020.0.1.
+
+
+Changes in version 2.3.3.RELEASE (2021-01-12)
+---------------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with the latest GA versions of Spring Framework 5.2, Spring Boot 2.3,
+Spring Data Neumann/2.3 and Spring Session 2.3.
+
+* Adds AbstractCookieSerializer and AbstractHttpSessionIdResolver base classes to simplify the implementation of
+the Spring Session core CookieSerializer and HttpSessionIdResolver interfaces.
+* Fixes bug in Spring Session (core) infrastructure component initialization.
+Resolves https://github.com/spring-projects/spring-session-data-geode/issues/51.
+* Upgrades to Gradle 6.8.
+* Upgrades to Spring Build Conventions Gradle Plugin 0.0.35.RELEASE.
+* Upgrades to Spring Framework 5.2.12.RELEASE.
+* Upgrades to Spring Boot 2.3.7.RELEASE.
+* Upgrades to Spring Data Commons 2.3.6.RELEASE.
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.3.6.RELEASE.
+* Upgrades to Spring Data Release Train (BOM) Neumann-SR6.
+
+
+Changes in version 2.2.7.RELEASE (2021-01-12)
+---------------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with the latest GA versions of Spring Framework 5.2, Spring Boot 2.2,
+Spring Data Moore/2.2 and Spring Session 2.2.
+
+* Adds AbstractCookieSerializer and AbstractHttpSessionIdResolver base classes to simplify the implementation of
+the Spring Session core CookieSerializer and HttpSessionIdResolver interfaces.
+* Fixes bug in Spring Session (core) infrastructure component initialization.
+Resolves https://github.com/spring-projects/spring-session-data-geode/issues/51.
+* Upgrades to Groovy 2.4.21.
+* Upgrades to Spring Framework 5.2.12.RELEASE.
+* Upgrades to Spring Boot 2.2.12.RELEASE.
+* Upgrades to Spring Data Commons 2.2.12.RELEASE.
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.2.12.RELEASE.
+* Upgrades to Spring Data Release Train (BOM) Moore-SR12.
+
+
+Changes in version 2.3.2.RELEASE (2020-11-09)
+---------------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with the latest GA versions of Spring Framework 5.2, Spring Boot 2.3,
+Spring Data Neumann/2.3 and Spring Session 2.3.
+
+* Upgrades to Gradle 6.7.
+* Upgrades to VMware Tanzu (Pivotal) GemFire 9.10.4
+* Upgrades to Spring Framework 5.2.10.RELEASE.
+* Upgrades to Spring Boot 2.3.5.RELEASE.
+* Upgrades to Spring Data Neumann-SR5.
+* Upgrades to Spring Data Commons 2.3.5.RELEASE.
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.3.5.RELEASE.
+* Upgrades to Spring Session BOM Dragonfruit-SR1.
+* Sets Spring Session core version to 2.3.1.RELEASE.
+
+
+Changes in version 2.2.6.RELEASE (2020-11-09)
+---------------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with the latest GA versions of Spring Framework 5.2, Spring Boot 2.2,
+Spring Data Moore/2.2 and Spring Session 2.2.
+
+* Upgrades to VMware Tanzu (Pivotal) GemFire 9.8.10.
+* Upgrades to Spring Framework 5.2.10.RELEASE.
+* Upgrades to Spring Boot 2.2.11.RELEASE.
+* Upgrades to Spring Data Moore-SR11.
+* Upgrades to Spring Data Commons 2.2.11.RELEASE.
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.2.11.RELEASE.
+* Upgrades to Spring Session BOM Corn-SR4.
+* Sets Spring Session core version to 2.2.4.RELEASE.
+
+
+Changes in version 2.1.12.RELEASE (2020-11-09)
+----------------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with the latest GA versions of Spring Framework 5.1, Spring Boot 2.1,
+Spring Data Lovelace/2.1 and Spring Session 2.1. This is the last release in the 2.1.x release series.
+
+* Upgrades to Spring Framework 5.1.19.RELEASE.
+* Upgrades to Spring Boot 2.1.18.RELEASE.
+* Upgrades to Spring Data Lovelace-SR21.
+* Upgrades to Spring Data Commons 2.1.21.RELEASE.
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.1.21.RELEASE.
+* Sets Spring Session core version to 2.1.13.RELEASE.
+
+
+Changes in version 2.4.0 (2020-10-28)
+-------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with GA versions of Spring Framework 5.3, Spring Boot 2.4,
+Spring Data Ockham/2.4 and Spring Session 2.4.
+
+* Upgrades to Gradle 6.7.
+* Upgrades to Spring Framework 5.3.0.
+* Upgrades to Spring Data 2020.0.0 (Ockham-RELEASE).
+* Upgrades to Spring Data Commons 2.4.0.
+* Upgrades to Spring Data for Apache Geode 2.4.0.
+* Upgrades to Spring Session 2.4.0.
+
+
+Changes in version 2.4.0-RC1 (2020-09-16)
+-----------------------------------------
+Aligns Spring Session for Apache Geode (SSDG) with the latest Spring Framework 5.3, Spring Boot 2.4,
+Spring Data Ockham/2.4 and Spring Session 2.4 versions.
+
+* Removes the spring-session-data-gemfire module.
+* Upgrades to Apache Geode 1.13.0.
+* Upgrades to Gradle 6.6.1.
+* Upgrades to Spring Build Conventions 0.0.34.RELEASE.
+* Upgrades to Spring Framework 5.3.0-RC1.
+* Upgrades to Spring Data 2020.0.0-RC1 (Ockham-RC1).
+* Upgrades to Spring Data for Apache Geode 2.4.0-RC1.
+* Upgrades to Spring Session 2.4.0-RC1.
+* Upgrades to Spring Test for Apache Geode 0.0.19.RELEASE.
+
+
+Changes in version 2.3.1.RELEASE (2020-09-16)
+---------------------------------------------
+Aligns Spring Session for Apache Geode & Pivotal GemFire (SSDG) with the latest Spring Framework, Spring Boot,
+Spring Data and Spring Session versions.
+
+* Adapts SSDG to API changes in STDG 0.0.19.RELEASE.
+* Upgrades to FreeFair Lombok Gradle Plugin 5.2.1.
+* Upgrades to Gradle 6.6.1.
+* Upgrades to VMware Tanzu (Pivotal) GemFire 9.10.2.
+* Upgrades to Spring Framework 5.2.9.RELEASE.
+* Upgrades to Spring Boot 2.3.3.RELEASE.
+* Upgrades to Spring Data Neumann-SR4.
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.3.4.RELEASE.
+* Upgrades to Spring Session 2.3.1.RELEASE.
+* Upgrades to Spring Session BOM Dragonfruit-RELEASE.
+* Upgrades to Spring Test for Apache Geode & VMware Tanzu (Pivotal) GemFire 0.0.19.RELEASE.
+* Upgrades to Spring Build Conventions Gradle Plugin 0.0.34.RELEASE.
+
+
+Changes in version 2.2.5.RELEASE (2020-09-16)
+---------------------------------------------
+Aligns Spring Session for Apache Geode & Pivotal GemFire (SSDG) with the latest Spring Framework, Spring Boot,
+Spring Data and Spring Session versions.
+
+* Upgrades to Apache Groovy 2.4.20.
+* Upgrades to VMware Tanzu (Pivotal) GemFire 9.8.9.
+* Upgrades to Spring Framework 5.2.9.RELEASE.
+* Upgrades to Spring Boot 2.2.9.RELEASE.
+* Upgrades to Spring Data Moore-SR10.
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.2.10.RELEASE.
+* Upgrades to Spring Session 2.2.4.RELEASE.
+* Upgrades to Spring Session BOM Corn-SR3.
+
+
+Changes in version 2.1.11.RELEASE (2020-09-16)
+----------------------------------------------
+Aligns Spring Session for Apache Geode & Pivotal GemFire (SSDG) with the latest Spring Framework, Spring Boot,
+Spring Data and Spring Session versions.
+
+* Upgrades to Apache Groovy 2.4.20.
+* Upgrades to Spring Framework 5.1.18.RELEASE
+* Upgrades to Spring Boot 2.1.16.RELEASE.
+* Upgrades to Spring Data Lovelace-SR20.
+* Upgrades to Spring Data for Apache Geode & VMware Tanzu (Pivotal) GemFire 2.2.20.RELEASE.
+* Upgrades to Spring Session 2.1.13.RELEASE.
+* Upgrades to Spring Session BOM Bean-SR12.
+
+
+Changes in version 2.4.0-M1 (2020-06-26)
+----------------------------------------
+Aligns Spring Session for Apache Geode & VMware GemFire (SSDG) with the latest Spring Framework 5.3, Spring Boot 2.4,
+Spring Data Ockham/2.4 and Spring Session 2.4 versions.
+
+* Upgrades to VMware GemFire 9.10.1.
+* Upgrades to Spring Framework 5.3.0-M1.
+* Upgrades to Spring Boot 2.4.0-SNAPSHOT.
+* Upgrades to Spring Data Ockham-M1.
+* Upgrades to Spring Data for Apache Geode & VMware GemFire 2.4.0-M1.
+* Upgrades to Spring Session 2.4.0-M1
+* Upgrades to Spring Session BOM 2020.0.0-SNAPSHOT
+* Upgrades to Spring Test for Apache Geode & VMware GemFire 0.0.16.RELEASE.
+* Upgrades to Gradle 6.5.
+* Upgrades to Spring Build Conventions 0.0.33.RELEASE.
+
+
+Changes in version 2.2.4.RELEASE (2020-05-18)
+----------------------------------------------
+Aligns Spring Session for Apache Geode & Pivotal GemFire (SSDG) with the latest Spring Framework, Spring Boot,
+Spring Data and Spring Session versions.
+
+* Upgrades to Apache Groovy 2.4.19.
+* Upgrades to Pivotal GemFire 9.8.7.
+* Upgrades to Spring Framework 5.2.6.RELEASE.
+* Upgrades to Spring Boot 2.2.7.RELEASE.
+* Upgrades to Spring Data Moore-SR7.
+* Upgrades to Spring Session 2.2.3.RELEASE
+* Upgrades to Spring Session BOM Corn-SR2.
+
+
+Changes in version 2.1.10.RELEASE (2020-05-18)
+----------------------------------------------
+Aligns Spring Session for Apache Geode & Pivotal GemFire (SSDG) with the latest Spring Framework, Spring Boot,
+Spring Data and Spring Session versions.
+
+* Upgrades to Apache Groovy 2.4.19.
+* Upgrades to Spring Framework 5.1.15.RELEASE.
+* Upgrades to Spring Boot 2.1.14.RELEASE.
+* Upgrades to Spring Data Lovelace-SR17.
+* Upgrades to Spring Session 2.1.12.RELEASE.
+* Upgrades to Spring Session BOM Bean-SR10.
+
+
+Changes in version 2.3.0.RELEASE (2020-05-13)
+---------------------------------------------
+Aligns Spring Session for Apache Geode & Pivotal GemFire (SSDG) with the latest Spring Framework, Spring Boot,
+Spring Data and Spring Session versions.
+
+* Baselines transitive dependencies on Spring Boot 2.3.0.RC1.
+* Upgrades to Spring Framework 5.2.6.RELEASE
+* Upgrades to Spring Data for Apache Geode & Pivotal GemFire 2.3.0.RELEASE.
+* Upgrades to Spring Data Release Train Neumann-RELEASE.
+* Upgrades to Spring Session 2.3.0.RELEASE.
+* Upgrades to Spring Test for Apache Geode & Pivotal GemFire 0.0.15.RELEASE.
+
+
+Changes in version 2.3.0.RC2 (2020-04-10)
+-----------------------------------------
+Aligns Spring Session for Apache Geode & Pivotal GemFire (SSDG) with the latest Spring Framework, Spring Boot,
+Spring Data and Spring Session versions.
+
+* Baselines transitive dependencies on Spring Boot 2.3.0.M4.
+* Upgrades to Apache Geode 1.12.0.
+* Upgrades to Pivotal GemFire 9.10.0.
+* Upgrades to Spring Framework 5.2.5.RELEASE
+* Upgrades to Spring Data for Apache Geode & Pivotal GemFire 2.3.0.RC1.
+* Upgrades to Spring Data Release Train Neumann-RC1.
+* Upgrades to Spring Session BOM Dragonfruit-RC2.
+
+
+Changes in version 2.3.0.RC1 (2020-03-03)
+-----------------------------------------
+Aligns Spring Session for Apache Geode & Pivotal GemFire (SSDG) with the latest Spring Framework, Spring Boot,
+Spring Data and Spring Session versions.
+
+* Adds Gradle build notes for the project.  The build notes describe how to build and test, min and max JVM Heap Memory,
+run individual Unit & Integration Tests in isolation, and adjust Apache Geode Logging.
+* Ignores unnecessary handling of LOCAL_LOAD_CREATED cache Region EntryEvents in
+the SessionEventHandlerCacheListenerAdapter.
+* Updates reference documentation style.
+* Upgrades to FreeFair Lombok Gradle Plugin 5.0.0-rc2.
+* Upgrades to Spring Framework 5.2.4.RELEASE.
+* Upgrades to Spring Boot 2.3.0.M2.
+* Upgrades to Spring Data Commons 2.3.0.M3.
+* Upgrades to Spring Data for Apache Geode & Pivotal GemFire 2.3.0.M3.
+* Upgrades to Spring Data Release Train Neumann-M3.
+* Upgrades to Spring Session 2.3.0.RC1.
+* Upgrades to Spring Session BOM Dragonfruit-M2.
+* Upgrades to Spring Test for Apache Geode & Pivotal GemFire 0.0.14.NEUMANN-BUILD-SNAPSHOT.
+
+
+Changes in version 2.3.0.M2 (2020-02-13)
+----------------------------------------
+Aligns Spring Session for Apache Geode & Pivotal GemFire (SSDG) with the latest Spring Framework, Spring Boot,
+Spring Data and Spring Session versions.
+
+* Upgrades to Spring Framework 5.2.3.RELEASE.
+* Upgrades to Spring Boot 2.3.0.M1.
+* Upgrades to Spring Data Commons 2.3.0.M3.
+* Upgrades to Spring Data for Apache Geode & Pivotal GemFire 2.3.0.M3.
+* Upgrades to Spring Data Release Train Neumann-M3.
+* Upgrades to Spring Session 2.3.0.M1.
+* Upgrades to Spring Session BOM Dragonfruit-M2.
+
+
+Changes in version 2.3.0.M1 (2020-01-24)
+----------------------------------------
+Aligns Spring Session for Apache Geode & Pivotal GemFire (SSDG) with the latest Spring Framework, Spring Boot,
+Spring Data and Spring Session versions.
+
+* Removes (reduces) use of internal Apache Geode APIs;
+Resolves (partly) https://github.com/spring-projects/spring-session-data-geode/issues/48.
+* Upgrades to Spring Framework 5.2.3.RELEASE.
+* Upgrades to Spring Boot 2.3.0.M1.
+* Upgrades to Spring Data Commons 2.3.0.M2.
+* Upgrades to Spring Data for Apache Geode & Pivotal GemFire 2.3.0.M2.
+* Upgrades to Spring Data Release Train Neumann-M2.
+* Upgrades to Spring Test for Apache Geode & Pivotal GemFire 0.0.13.NEUMANN-BUILD-SNAPSHOT.
+* Upgrades to Apache Geode 1.11.0.
+* Upgrades to Pivotal GemFire 9.9.1.
+* Use Spring Session 2.2.0.RELEASE.
+* Use Spring Session BOM Corn-RELEASE.

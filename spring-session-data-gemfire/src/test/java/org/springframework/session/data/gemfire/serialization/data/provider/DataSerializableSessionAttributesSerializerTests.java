@@ -1,0 +1,121 @@
+/*
+ * Copyright (c) VMware, Inc. 2022. All rights reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package org.springframework.session.data.gemfire.serialization.data.provider;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.doAnswer;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.spy;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.springframework.data.gemfire.util.CollectionUtils.asSet;
+import static org.springframework.session.data.gemfire.AbstractGemFireOperationsSessionRepository.DeltaCapableGemFireSessionAttributes;
+import static org.springframework.session.data.gemfire.AbstractGemFireOperationsSessionRepository.GemFireSessionAttributes;
+
+import java.io.DataInput;
+import java.io.DataOutput;
+import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import org.junit.Test;
+
+/**
+ * Unit tests for {@link DataSerializableSessionAttributesSerializer}.
+ *
+ * @author John Blum
+ * @see org.junit.Test
+ * @see org.mockito.Mock
+ * @see org.mockito.Mockito
+ * @see org.mockito.Spy
+ * @see org.springframework.session.data.gemfire.AbstractGemFireOperationsSessionRepository.GemFireSessionAttributes
+ * @see org.springframework.session.data.gemfire.serialization.data.provider.DataSerializableSessionAttributesSerializer
+ * @since 2.0.0
+ */
+public class DataSerializableSessionAttributesSerializerTests {
+
+	private DataSerializableSessionAttributesSerializer sessionAttributesSerializer =
+		spy(new DataSerializableSessionAttributesSerializer());
+
+	@Test
+	public void getIdReturnsSameValue() {
+
+		int id = this.sessionAttributesSerializer.getId();
+
+		assertThat(id).isNotEqualTo(0);
+		assertThat(id).isEqualTo(this.sessionAttributesSerializer.getId());
+	}
+
+	@Test
+	public void supportedClassesContainsGemFireSessionAttributesAndSubTypes() {
+		assertThat(this.sessionAttributesSerializer.getSupportedClasses()).contains(GemFireSessionAttributes.class);
+		assertThat(this.sessionAttributesSerializer.getSupportedClasses()).contains(DeltaCapableGemFireSessionAttributes.class);
+	}
+
+	@Test
+	public void sessionAttributesToData() throws Exception {
+
+		DataOutput mockDataOutput = mock(DataOutput.class);
+
+		GemFireSessionAttributes sessionAttributes = GemFireSessionAttributes.create();
+
+		assertThat(sessionAttributes).isNotNull();
+		assertThat(sessionAttributes.hasDelta()).isFalse();
+
+		sessionAttributes.setAttribute("attrOne", "testOne");
+		sessionAttributes.setAttribute("attrTwo", "testTwo");
+
+		doAnswer(invocation -> {
+
+			DataOutput dataOutput = invocation.getArgument(1);
+
+			dataOutput.writeUTF(invocation.getArgument(0));
+
+			return null;
+
+		}).when(sessionAttributesSerializer).serializeObject(any(), any(DataOutput.class));
+
+		assertThat(sessionAttributes.hasDelta()).isTrue();
+
+		sessionAttributesSerializer.serialize(sessionAttributes, mockDataOutput);
+
+		assertThat(sessionAttributes.hasDelta()).isTrue();
+
+		verify(mockDataOutput, times(1)).writeInt(eq(2));
+		verify(mockDataOutput, times(1)).writeUTF(eq("attrOne"));
+		verify(mockDataOutput, times(1)).writeUTF(eq("testOne"));
+		verify(mockDataOutput, times(1)).writeUTF(eq("attrTwo"));
+		verify(mockDataOutput, times(1)).writeUTF(eq("testTwo"));
+	}
+
+	@Test
+	public void sessionAttributesFromData() throws Exception {
+
+		AtomicInteger count =  new AtomicInteger(0);
+
+		DataInput mockDataInput = mock(DataInput.class);
+
+		given(mockDataInput.readInt()).willReturn(2);
+		given(mockDataInput.readUTF()).willReturn("attrOne").willReturn("attrTwo");
+
+		doAnswer(invocation -> Arrays.asList("testOne", "testTwo").get(count.getAndIncrement()))
+			.when(sessionAttributesSerializer).deserializeObject(any(DataInput.class));
+
+		GemFireSessionAttributes sessionAttributes = sessionAttributesSerializer.deserialize(mockDataInput);
+
+		assertThat(sessionAttributes).isNotNull();
+		assertThat(sessionAttributes).hasSize(2);
+		assertThat(sessionAttributes.getAttributeNames()).containsAll(asSet("attrOne", "attrTwo"));
+		assertThat(sessionAttributes.<String>getAttribute("attrOne")).isEqualTo("testOne");
+		assertThat(sessionAttributes.<String>getAttribute("attrTwo")).isEqualTo("testTwo");
+		assertThat(sessionAttributes.hasDelta()).isTrue();
+
+		verify(mockDataInput, times(1)).readInt();
+		verify(mockDataInput, times(2)).readUTF();
+	}
+}

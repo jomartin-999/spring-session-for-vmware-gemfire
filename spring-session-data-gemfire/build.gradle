@@ -7,6 +7,7 @@ plugins {
   id 'spring-java-jar'
 }
 
+description = 'Spring Session for VMware GemFire'
 project.ext.set("pomProjectLongName","Spring Session VMware GemFire")
 project.ext.set("pomProjectArtifactName","spring-session-2.6-gemfire-${gemfireBaseVersion}")
 project.ext.set("pomProjectDescription","Spring Session For VMware GemFire")
@@ -18,15 +19,11 @@ facets {
 }
 
 dependencies {
-  api ('org.springframework.session:spring-session-data-geode'){
-    exclude group:'org.springframework.data',module:'spring-data-geode'
-  }
   api 'org.springframework:spring-context-support'
   api 'org.springframework:spring-jcl'
 
   api "com.vmware.gemfire:spring-data-2.6-gemfire-${gemfireBaseVersion}:$springDataGemFireVersion"
   api 'org.springframework.session:spring-session-core'
-
 
   api 'com.google.code.findbugs:jsr305'
   api 'org.springframework.security:spring-security-core'
@@ -64,64 +61,27 @@ dependencies {
 }
 
 sourceSets {
-  test {
-    java {
-      srcDir file('src/test/java')
-      srcDir file('src/ssdg-test-read-only/java')
-    }
-    resources {
-      srcDir file('src/test/resources')
-      srcDir file('src/ssdg-test-read-only/resources')
-    }
-  }
   integrationTest {
     java {
       srcDir file('src/integrationTest/java')
-      srcDir file('src/ssdg-integration-test-read-only/java')
     }
     resources {
       srcDir file('src/integrationTest/resources')
-      srcDir file('src/ssdg-integration-test-read-only/resources')
     }
   }
 }
 
-description = 'Spring Session for VMware GemFire'
-
-
-task copySpringTestClasses(type: Exec) {
-  workingDir "${rootProject.rootDir}/scripts"
-  commandLine 'chmod', '+x', 'copySSDGTestResources.sh'
-  if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
-    commandLine 'cmd', '/c', 'mycommand'
-  } else {
-    commandLine './copySSDGTestResources.sh', '-l', "${rootProject.rootDir}/tmp/spring-session-data-geode", '-b',
-        "${springSessionDataGeodeVersion}", '-t', "${rootProject.rootDir}"
-  }
-}
-
-task cleanSpringTestResources(type: Exec) {
-  commandLine 'rm', '-rf', "${project.projectDir}/src/ssdg-test-read-only", "${project.projectDir}/src/ssdg-integration-test-read-only"
-}
-
-clean {
-  dependsOn("cleanSpringTestResources")
-}
-
 integrationTest{
-  dependsOn("copySpringTestClasses")
   forkEvery = 1
   maxParallelForks = 1
 
   filter {
     includeTestsMatching "*.*Tests"
     includeTestsMatching "*.*Test"
-    excludeTestsMatching("org.springframework.session.data.gemfire.serialization.pdx.SessionSerializationWithPdxRequiresNoServerConfigurationIntegrationTests")
   }
 }
 
 test {
-  dependsOn("copySpringTestClasses")
   forkEvery = 1
   maxParallelForks = 1
 
@@ -129,10 +89,6 @@ test {
     includeTestsMatching "*.*Tests"
     includeTestsMatching "*.*Test"
   }
-}
-
-build {
-  dependsOn("copySpringTestClasses")
 }
 
 repositories {
