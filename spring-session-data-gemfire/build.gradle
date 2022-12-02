@@ -23,7 +23,7 @@ dependencies {
   implementation 'org.springframework:spring-jcl'
 
   api "com.vmware.gemfire:spring-data-2.6-gemfire-${gemfireBaseVersion}:$springDataGemFireVersion"
-  implementation 'org.springframework.session:spring-session-core'
+  api 'org.springframework.session:spring-session-core'
 
   implementation 'com.google.code.findbugs:jsr305'
   implementation 'org.springframework.security:spring-security-core'
