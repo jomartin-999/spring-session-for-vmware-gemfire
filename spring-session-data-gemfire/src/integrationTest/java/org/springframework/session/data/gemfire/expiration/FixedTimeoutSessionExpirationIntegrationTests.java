@@ -2,7 +2,6 @@
  * Copyright (c) VMware, Inc. 2022. All rights reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
-
 package org.springframework.session.data.gemfire.expiration;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -11,7 +10,7 @@ import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.Optional;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -39,13 +38,13 @@ import org.springframework.util.ReflectionUtils;
  * Integration tests asserting fixed duration expiration timeout for a {@link Session}.
  *
  * @author John Blum
- * @see java.time.Duration
- * @see org.junit.Test
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
- * @see org.springframework.session.data.gemfire.expiration.support.FixedTimeoutSessionExpirationPolicy
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see Duration
+ * @see Test
+ * @see Session
+ * @see EnableGemFireHttpSession
+ * @see FixedTimeoutSessionExpirationPolicy
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.1.0
  */
 @RunWith(SpringRunner.class)

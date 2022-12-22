@@ -2,7 +2,6 @@
  * Copyright (c) VMware, Inc. 2022. All rights reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
-
 package org.springframework.session.data.gemfire.serialization.data.provider;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -26,7 +25,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.junit.Test;
 
 /**
- * Unit tests for {@link DataSerializableSessionAttributesSerializer}.
+ * Unit Tests for {@link DataSerializableSessionAttributesSerializer}.
  *
  * @author John Blum
  * @see org.junit.Test
@@ -39,7 +38,7 @@ import org.junit.Test;
  */
 public class DataSerializableSessionAttributesSerializerTests {
 
-	private DataSerializableSessionAttributesSerializer sessionAttributesSerializer =
+	private final DataSerializableSessionAttributesSerializer sessionAttributesSerializer =
 		spy(new DataSerializableSessionAttributesSerializer());
 
 	@Test

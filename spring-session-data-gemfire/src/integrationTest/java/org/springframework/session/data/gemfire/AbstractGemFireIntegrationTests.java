@@ -45,21 +45,21 @@ import org.springframework.util.StringUtils;
  * integration tests.
  *
  * @author John Blum
- * @see java.io.File
- * @see java.net.URL
- * @see java.time.Instant
+ * @see File
+ * @see URL
+ * @see Instant
  * @see org.junit.Test
- * @see org.apache.geode.cache.DataPolicy
- * @see org.apache.geode.cache.ExpirationAttributes
- * @see org.apache.geode.cache.GemFireCache
- * @see org.apache.geode.cache.Region
- * @see org.apache.geode.cache.query.Index
- * @see org.springframework.context.ApplicationEvent
+ * @see DataPolicy
+ * @see ExpirationAttributes
+ * @see GemFireCache
+ * @see Region
+ * @see Index
+ * @see ApplicationEvent
  * @see org.springframework.context.ApplicationContext
- * @see org.springframework.context.ApplicationListener
- * @see org.springframework.data.gemfire.tests.integration.ForkingClientServerIntegrationTestsSupport
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
+ * @see ApplicationListener
+ * @see ForkingClientServerIntegrationTestsSupport
+ * @see Session
+ * @see GemFireHttpSessionConfiguration
  * @see org.springframework.session.events.AbstractSessionEvent
  * @since 1.1.0
  */
@@ -399,7 +399,7 @@ public abstract class AbstractGemFireIntegrationTests extends ForkingClientServe
 	 * The SessionEventListener class is a Spring {@link ApplicationListener} listening
 	 * for Spring HTTP Session application events.
 	 *
-	 * @see org.springframework.context.ApplicationListener
+	 * @see ApplicationListener
 	 * @see org.springframework.session.events.AbstractSessionEvent
 	 */
 	public static class SessionEventListener implements ApplicationListener<ApplicationEvent> {

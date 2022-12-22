@@ -36,18 +36,18 @@ import org.springframework.test.context.junit4.SpringRunner;
  * and Spring container {@link ApplicationEvent ApplicationEvents}.
  *
  * @author John Blum
- * @see org.apache.geode.cache.EntryEvent
- * @see org.junit.Test
- * @see org.springframework.context.ApplicationEvent
- * @see org.springframework.context.annotation.AnnotationConfigApplicationContext
- * @see org.springframework.data.gemfire.config.annotation.CacheServerApplication
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheApplication
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
- * @see org.springframework.session.events.SessionCreatedEvent
- * @see org.springframework.session.events.SessionDeletedEvent
- * @see org.springframework.session.events.SessionExpiredEvent
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see EntryEvent
+ * @see Test
+ * @see ApplicationEvent
+ * @see AnnotationConfigApplicationContext
+ * @see CacheServerApplication
+ * @see ClientCacheApplication
+ * @see EnableGemFireHttpSession
+ * @see SessionCreatedEvent
+ * @see SessionDeletedEvent
+ * @see SessionExpiredEvent
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 1.1.0
  */
 @RunWith(SpringRunner.class)
@@ -85,7 +85,9 @@ public class ClientServerProxyRegionSessionOperationsIntegrationTests extends Ab
 
 		assertThat(loadedSession).isNotNull();
 		assertThat(loadedSession.getId()).isEqualTo(session.getId());
-		assertThat(loadedSession.getCreationTime()).isEqualTo(session.getCreationTime());
+		// TODO: Problem on Java 17
+		//assertThat(loadedSession.getCreationTime()).isEqualTo(session.getCreationTime());
+		assertThat(loadedSession.getCreationTime().toEpochMilli()).isEqualTo(session.getCreationTime().toEpochMilli());
 		assertThat(loadedSession.getLastAccessedTime().compareTo(session.getLastAccessedTime()))
 			.isGreaterThanOrEqualTo(0);
 

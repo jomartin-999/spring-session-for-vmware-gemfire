@@ -46,21 +46,21 @@ import org.springframework.util.ObjectUtils;
  *
  * @author John Blum
  * @since 1.1.0
- * @see org.junit.Test
- * @see org.junit.runner.RunWith
- * @see org.apache.geode.cache.Region
- * @see org.apache.geode.cache.query.QueryService
- * @see org.apache.geode.pdx.PdxSerializable
- * @see org.springframework.data.gemfire.config.annotation.PeerCacheApplication
- * @see org.springframework.security.core.context.SecurityContext
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.GemFireOperationsSessionRepository
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
- * @see org.springframework.test.annotation.DirtiesContext
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
- * @see org.springframework.test.context.web.WebAppConfiguration
+ * @see Test
+ * @see RunWith
+ * @see Region
+ * @see QueryService
+ * @see PdxSerializable
+ * @see PeerCacheApplication
+ * @see SecurityContext
+ * @see Session
+ * @see AbstractGemFireIntegrationTests
+ * @see GemFireOperationsSessionRepository
+ * @see EnableGemFireHttpSession
+ * @see DirtiesContext
+ * @see ContextConfiguration
+ * @see SpringRunner
+ * @see WebAppConfiguration
  */
 @RunWith(SpringRunner.class)
 @ContextConfiguration

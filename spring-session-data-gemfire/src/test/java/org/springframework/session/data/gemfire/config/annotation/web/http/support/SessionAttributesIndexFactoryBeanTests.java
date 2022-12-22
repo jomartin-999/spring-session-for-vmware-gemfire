@@ -21,11 +21,11 @@ import org.springframework.session.data.gemfire.config.annotation.web.http.GemFi
  * Unit Tests for {@link SessionAttributesIndexFactoryBean}.
  *
  * @author John Blum
- * @see Test
+ * @see org.junit.Test
  * @see org.mockito.Mockito
- * @see Index
- * @see GemFireHttpSessionConfiguration
- * @see SessionAttributesIndexFactoryBean
+ * @see org.apache.geode.cache.query.Index
+ * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
+ * @see org.springframework.session.data.gemfire.config.annotation.web.http.support.SessionAttributesIndexFactoryBean
  * @since 1.3.0
  */
 public class SessionAttributesIndexFactoryBeanTests {

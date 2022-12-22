@@ -44,15 +44,15 @@ import org.springframework.test.context.web.WebAppConfiguration;
  * the 'poolName' attribute in the Spring Session Data Pivotal GemFire {@link EnableGemFireHttpSession} annotation.
  *
  * @author John Blum
- * @see org.junit.Test
- * @see org.junit.runner.RunWith
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
+ * @see Test
+ * @see RunWith
+ * @see AbstractGemFireIntegrationTests
+ * @see EnableGemFireHttpSession
  * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
- * @see org.springframework.test.annotation.DirtiesContext
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
- * @see org.springframework.test.context.web.WebAppConfiguration
+ * @see DirtiesContext
+ * @see ContextConfiguration
+ * @see SpringRunner
+ * @see WebAppConfiguration
  * @see org.apache.geode.cache.Cache
  * @see org.apache.geode.cache.client.ClientCache
  * @see org.apache.geode.cache.client.Pool
@@ -178,8 +178,8 @@ public class MultiPoolClientServerGemFireOperationsSessionRepositoryIntegrationT
 		}
 
 		@Bean
-		public AbstractGemFireIntegrationTests.SessionEventListener sessionEventListener() {
-			return new AbstractGemFireIntegrationTests.SessionEventListener();
+		public SessionEventListener sessionEventListener() {
+			return new SessionEventListener();
 		}
 	}
 

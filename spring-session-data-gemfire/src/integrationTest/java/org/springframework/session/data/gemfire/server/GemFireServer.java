@@ -26,11 +26,11 @@ import org.apache.geode.cache.server.CacheServer;
  * {@link RegionShortcut#PARTITION} {@link Region}.
  *
  * @author John Blum
- * @see java.util.Properties
- * @see org.apache.geode.cache.Cache
+ * @see Properties
+ * @see Cache
  * @see org.apache.geode.cache.GemFireCache
- * @see org.apache.geode.cache.Region
- * @see org.apache.geode.cache.server.CacheServer
+ * @see Region
+ * @see CacheServer
  * @since 2.0.0
  */
 public class GemFireServer implements Runnable {

@@ -39,17 +39,17 @@ import org.springframework.session.data.gemfire.serialization.data.provider.Data
  * Unit tests for {@link DataSerializableSessionSerializerInitializer}.
  *
  * @author John Blum
- * @see org.junit.Test
- * @see org.mockito.Mock
+ * @see Test
+ * @see Mock
  * @see org.mockito.Mockito
  * @see org.mockito.Spy
- * @see org.mockito.junit.MockitoJUnitRunner
- * @see org.apache.geode.DataSerializer
- * @see org.apache.geode.internal.InternalDataSerializer
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.serialization.data.provider.DataSerializableSessionAttributesSerializer
- * @see org.springframework.session.data.gemfire.serialization.data.provider.DataSerializableSessionSerializer
- * @see org.springframework.session.data.gemfire.serialization.data.support.DataSerializableSessionSerializerInitializer
+ * @see MockitoJUnitRunner
+ * @see DataSerializer
+ * @see InternalDataSerializer
+ * @see AbstractGemFireIntegrationTests
+ * @see DataSerializableSessionAttributesSerializer
+ * @see DataSerializableSessionSerializer
+ * @see DataSerializableSessionSerializerInitializer
  * @since 2.1.1
  */
 @RunWith(MockitoJUnitRunner.class)

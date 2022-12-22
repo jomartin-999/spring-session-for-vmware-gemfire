@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.Optional;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -39,22 +39,22 @@ import org.springframework.util.ReflectionUtils;
  * involving {@link Session} expiration configuration.
  *
  * @author John Blum
- * @see org.junit.Test
- * @see org.apache.geode.cache.ExpirationAction
- * @see org.apache.geode.cache.ExpirationAttributes
- * @see org.apache.geode.cache.Region
- * @see org.apache.geode.cache.RegionAttributes
- * @see org.springframework.context.annotation.Bean
- * @see org.springframework.data.gemfire.config.annotation.PeerCacheApplication
- * @see org.springframework.data.gemfire.tests.mock.annotation.EnableGemFireMockObjects
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
- * @see org.springframework.session.data.gemfire.expiration.config.SessionExpirationTimeoutAware
- * @see org.springframework.session.data.gemfire.expiration.support.SessionExpirationPolicyCustomExpiryAdapter
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see Test
+ * @see ExpirationAction
+ * @see ExpirationAttributes
+ * @see Region
+ * @see RegionAttributes
+ * @see Bean
+ * @see PeerCacheApplication
+ * @see EnableGemFireMockObjects
+ * @see Session
+ * @see AbstractGemFireIntegrationTests
+ * @see EnableGemFireHttpSession
+ * @see GemFireHttpSessionConfiguration
+ * @see SessionExpirationTimeoutAware
+ * @see SessionExpirationPolicyCustomExpiryAdapter
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.1.0
  */
 @RunWith(SpringRunner.class)

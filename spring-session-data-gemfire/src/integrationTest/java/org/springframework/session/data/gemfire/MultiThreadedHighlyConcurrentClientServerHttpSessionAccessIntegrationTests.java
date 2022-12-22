@@ -55,16 +55,16 @@ import org.springframework.util.StringUtils;
  * Multi-Threaded, Highly-Concurrent, {@link Session} Data Access Operations Integration Test.
  *
  * @author John Blum
- * @see java.util.concurrent.ExecutorService
- * @see org.junit.Test
- * @see org.springframework.data.gemfire.config.annotation.CacheServerApplication
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheApplication
- * @see org.springframework.session.Session
+ * @see ExecutorService
+ * @see Test
+ * @see CacheServerApplication
+ * @see ClientCacheApplication
+ * @see Session
  * @see org.springframework.session.SessionRepository
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
+ * @see EnableGemFireHttpSession
  * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.1.2
  */
 @RunWith(SpringRunner.class)

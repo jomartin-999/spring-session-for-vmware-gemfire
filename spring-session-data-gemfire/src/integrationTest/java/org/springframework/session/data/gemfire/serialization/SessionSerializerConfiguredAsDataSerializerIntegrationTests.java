@@ -25,21 +25,21 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * Integration tests to assert that any user-provided, custom {@link SessionSerializer} not bound to either
+ * Integration Tests to assert that any user-provided, custom {@link SessionSerializer} not bound to either
  * GemFire/Geode's Data Serialization of PDX Serialization framework is wrapped in
  * the {@link DataSerializerSessionSerializerAdapter} when the {@link DataSerializerSessionSerializerAdapter}
  * is present as a bean in the Spring context.
  *
  * @author John Blum
  * @see org.apache.geode.DataSerializer
- * @see org.apache.geode.cache.GemFireCache
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheApplication
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
- * @see org.springframework.session.data.gemfire.serialization.data.support.DataSerializerSessionSerializerAdapter
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see GemFireCache
+ * @see ClientCacheApplication
+ * @see AbstractGemFireIntegrationTests
+ * @see EnableGemFireHttpSession
+ * @see GemFireHttpSessionConfiguration
+ * @see DataSerializerSessionSerializerAdapter
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.0.0
  */
 @RunWith(SpringRunner.class)

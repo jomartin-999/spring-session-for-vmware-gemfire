@@ -44,20 +44,20 @@ import org.springframework.test.context.web.WebAppConfiguration;
  * of the {@link GemFireOperationsSessionRepository} and GemFire's configuration.
  *
  * @author John Blum
- * @see org.junit.Test
- * @see org.junit.runner.RunWith
- * @see org.apache.geode.cache.Region
- * @see org.springframework.data.gemfire.config.annotation.PeerCacheApplication
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.GemFireOperationsSessionRepository
- * @see org.springframework.session.events.SessionCreatedEvent
- * @see org.springframework.session.events.SessionDeletedEvent
- * @see org.springframework.session.events.SessionExpiredEvent
- * @see org.springframework.test.annotation.DirtiesContext
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
- * @see org.springframework.test.context.web.WebAppConfiguration
+ * @see Test
+ * @see RunWith
+ * @see Region
+ * @see PeerCacheApplication
+ * @see Session
+ * @see AbstractGemFireIntegrationTests
+ * @see GemFireOperationsSessionRepository
+ * @see SessionCreatedEvent
+ * @see SessionDeletedEvent
+ * @see SessionExpiredEvent
+ * @see DirtiesContext
+ * @see ContextConfiguration
+ * @see SpringRunner
+ * @see WebAppConfiguration
  * @since 1.1.0
  */
 @RunWith(SpringRunner.class)

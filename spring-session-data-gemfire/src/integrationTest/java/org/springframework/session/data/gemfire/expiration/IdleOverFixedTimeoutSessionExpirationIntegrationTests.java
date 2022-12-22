@@ -2,7 +2,6 @@
  * Copyright (c) VMware, Inc. 2022. All rights reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
-
 package org.springframework.session.data.gemfire.expiration;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -12,7 +11,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.Optional;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,17 +40,17 @@ import org.springframework.util.ReflectionUtils;
  * when an idle {@link Session} will expire before the fixed duration timeout.
  *
  * @author John Blum
- * @see org.junit.Test
- * @see org.apache.geode.cache.Region
- * @see org.springframework.context.annotation.Bean
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheApplication
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
- * @see org.springframework.session.data.gemfire.expiration.support.FixedTimeoutSessionExpirationPolicy
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see Test
+ * @see Region
+ * @see Bean
+ * @see ClientCacheApplication
+ * @see Session
+ * @see AbstractGemFireIntegrationTests
+ * @see EnableGemFireHttpSession
+ * @see GemFireHttpSessionConfiguration
+ * @see FixedTimeoutSessionExpirationPolicy
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.1.0
  */
 @RunWith(SpringRunner.class)

@@ -32,16 +32,16 @@ import org.springframework.test.context.junit4.SpringRunner;
  * Spring Session Data GemFire's Session-based {@link PdxSerializer}.
  *
  * @author John Blum
- * @see org.junit.Test
- * @see org.apache.geode.cache.GemFireCache
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheApplication
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheConfigurer
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
- * @see org.springframework.session.data.gemfire.serialization.pdx.support.ComposablePdxSerializer
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see Test
+ * @see GemFireCache
+ * @see ClientCacheApplication
+ * @see ClientCacheConfigurer
+ * @see AbstractGemFireIntegrationTests
+ * @see EnableGemFireHttpSession
+ * @see GemFireHttpSessionConfiguration
+ * @see ComposablePdxSerializer
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.0.0
  */
 @RunWith(SpringRunner.class)

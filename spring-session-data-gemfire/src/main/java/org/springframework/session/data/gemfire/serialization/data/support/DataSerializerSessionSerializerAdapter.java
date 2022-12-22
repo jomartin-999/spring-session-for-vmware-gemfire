@@ -2,7 +2,6 @@
  * Copyright (c) VMware, Inc. 2022. All rights reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
-
 package org.springframework.session.data.gemfire.serialization.data.support;
 
 import static org.springframework.data.gemfire.util.ArrayUtils.asArray;
@@ -27,9 +26,9 @@ import org.springframework.session.data.gemfire.serialization.SessionSerializer;
 import org.springframework.stereotype.Component;
 
 /**
- * The {@link DataSerializerSessionSerializerAdapter} class is a two-way Adapter adapting a {@link SessionSerializer}
- * instance as an instance of {@link DataSerializer} in a GemFire/Geode context, or adapting a {@link DataSerializer}
- * as a {@link SessionSerializer} in a Spring Session context.
+ * The {@link DataSerializerSessionSerializerAdapter} class is a two-way {@literal Adapter}
+ * adapting a {@link SessionSerializer} as an instance of {@link DataSerializer} in a GemFire/Geode context,
+ * or adapting a {@link DataSerializer} as an instance of {@link SessionSerializer} in a Spring Session context.
  *
  * @author John Blum
  * @see DataSerializer

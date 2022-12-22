@@ -2,7 +2,6 @@
  * Copyright (c) VMware, Inc. 2022. All rights reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
-
 package org.springframework.session.data.gemfire.serialization.data.support;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -32,22 +31,22 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * Integration tests for {@link DataSerializerSessionSerializerAdapter}.
+ * Integration Tests for {@link DataSerializerSessionSerializerAdapter}.
  *
  * @author John Blum
- * @see java.io.DataInput
- * @see java.io.DataOutput
- * @see org.junit.Test
+ * @see DataInput
+ * @see DataOutput
+ * @see Test
  * @see org.mockito.Mockito
- * @see org.springframework.context.annotation.Bean
- * @see org.springframework.context.annotation.Configuration
- * @see org.springframework.data.gemfire.support.GemfireBeanFactoryLocator
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.serialization.SessionSerializer
- * @see org.springframework.session.data.gemfire.serialization.data.support.DataSerializerSessionSerializerAdapter
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see Bean
+ * @see Configuration
+ * @see GemfireBeanFactoryLocator
+ * @see Session
+ * @see AbstractGemFireIntegrationTests
+ * @see SessionSerializer
+ * @see DataSerializerSessionSerializerAdapter
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.0.0
  */
 @RunWith(SpringRunner.class)
@@ -83,6 +82,7 @@ public class DataSerializerSessionSerializerAdapterIntegrationTests extends Abst
 		}
 
 		@Bean
+		@SuppressWarnings("rawtypes")
 		DataSerializerSessionSerializerAdapter dataSerializer() {
 			return new DataSerializerSessionSerializerAdapter();
 		}

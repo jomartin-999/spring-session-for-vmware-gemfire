@@ -27,7 +27,6 @@ import org.apache.geode.cache.RegionAttributes;
 import org.apache.geode.cache.RegionShortcut;
 import org.apache.geode.cache.client.ClientCache;
 import org.apache.geode.cache.client.ClientRegionShortcut;
-import org.apache.geode.internal.cache.AbstractRegion;
 
 /**
  * Unit Tests for {@link GemFireUtils}.
@@ -164,12 +163,11 @@ public class GemFireUtilsTests {
 
 	@Test
 	@SuppressWarnings("rawtypes")
-	// TODO: Remove use of Apache Geode internal API (AbstractRegion).
 	public void clientRegionWithServerProxyIsNonLocalClientRegion() {
 
 		ClientCache mockClientCache = mock(ClientCache.class);
 
-		AbstractRegion mockRegion = mock(AbstractRegion.class);
+		ServerProxyCapableRegion mockRegion = mock(ServerProxyCapableRegion.class);
 
 		RegionAttributes mockRegionAttributes = mock(RegionAttributes.class);
 
@@ -188,12 +186,11 @@ public class GemFireUtilsTests {
 
 	@Test
 	@SuppressWarnings("rawtypes")
-	// TODO: Remove use of Apache Geode internal API (AbstractRegion).
 	public void clientRegionWithNoPoolAndNoServerProxyIsNotNonLocalClientRegion() {
 
 		ClientCache mockClientCache = mock(ClientCache.class);
 
-		AbstractRegion mockRegion = mock(AbstractRegion.class);
+		ServerProxyCapableRegion mockRegion = mock(ServerProxyCapableRegion.class);
 
 		RegionAttributes mockRegionAttributes = mock(RegionAttributes.class);
 
@@ -233,12 +230,11 @@ public class GemFireUtilsTests {
 
 	@Test
 	@SuppressWarnings("rawtypes")
-	// TODO: Remove use of Apache Geode internal API (AbstractRegion).
 	public void peerRegionWithServerProxyIsNotNonLocalClientRegion() {
 
 		Cache mockPeerCache = mock(Cache.class);
 
-		AbstractRegion mockRegion = mock(AbstractRegion.class);
+		ServerProxyCapableRegion mockRegion = mock(ServerProxyCapableRegion.class);
 
 		RegionAttributes mockRegionAttributes = mock(RegionAttributes.class);
 
@@ -424,5 +420,11 @@ public class GemFireUtilsTests {
 		Arrays.stream(RegionShortcut.values())
 			.filter(it -> !it.name().toLowerCase().contains("proxy"))
 			.forEach(it -> assertThat(GemFireUtils.isProxy(it)).isFalse());
+	}
+
+	interface ServerProxyCapableRegion<K, V> extends Region<K, V> {
+
+		boolean hasServerProxy();
+
 	}
 }

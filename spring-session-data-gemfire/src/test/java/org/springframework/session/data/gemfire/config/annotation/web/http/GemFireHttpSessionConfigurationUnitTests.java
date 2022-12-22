@@ -12,12 +12,14 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.when;
 
 import java.lang.reflect.Field;
@@ -39,6 +41,7 @@ import org.apache.geode.cache.client.ClientRegionShortcut;
 
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -133,10 +136,13 @@ public class GemFireHttpSessionConfigurationUnitTests {
 
 		this.gemfireConfiguration = spy(new GemFireHttpSessionConfiguration());
 
-		ApplicationContext mockApplicationContext = mock(ApplicationContext.class);
+		ConfigurableApplicationContext mockApplicationContext = mock(ConfigurableApplicationContext.class);
 
-		when(mockApplicationContext.getBean(eq(SpringSessionGemFireConfigurer.class)))
-			.thenThrow(new NoSuchBeanDefinitionException("No SpringSessionGemFireConfigurer bean present"));
+		ConfigurableListableBeanFactory mockBeanFactory = mock(ConfigurableListableBeanFactory.class);
+
+		doReturn(mockBeanFactory).when(mockApplicationContext).getBeanFactory();
+		doThrow(new NoSuchBeanDefinitionException("No SpringSessionGemFireConfigurer bean present"))
+			.when(mockApplicationContext).getBean(eq(SpringSessionGemFireConfigurer.class));
 
 		this.gemfireConfiguration.setApplicationContext(mockApplicationContext);
 	}
@@ -673,25 +679,15 @@ public class GemFireHttpSessionConfigurationUnitTests {
 	@Test
 	public void postConstructInitRegistersBeanAlias() {
 
-		ConfigurableListableBeanFactory mockBeanFactory = mock(ConfigurableListableBeanFactory.class);
+		ConfigurableBeanFactory beanFactory = this.gemfireConfiguration.getBeanFactory();
 
-		ConfigurableApplicationContext mockApplicationContext = mock(ConfigurableApplicationContext.class);
-
-		given(mockApplicationContext.getBeanFactory()).willReturn(mockBeanFactory);
-
-		assertThat(System.getProperty(GemFireHttpSessionConfiguration.SESSION_SERIALIZER_BEAN_ALIAS)).isNull();
-
-		this.gemfireConfiguration.setApplicationContext(mockApplicationContext);
 		this.gemfireConfiguration.setSessionSerializerBeanName("testSessionSerializer");
-		this.gemfireConfiguration.initGemFire();
-		this.gemfireConfiguration.init();
+		this.gemfireConfiguration.registerSessionSerializerBeanAlias();
 
-		assertThat(this.gemfireConfiguration.getApplicationContext()).isSameAs(mockApplicationContext);
-
-		verify(mockApplicationContext, times(1)).getBeanFactory();
-
-		verify(mockBeanFactory, times(1))
+		verify(beanFactory, times(1))
 			.registerAlias(eq("testSessionSerializer"), eq(GemFireHttpSessionConfiguration.SESSION_SERIALIZER_BEAN_ALIAS));
+
+		verifyNoMoreInteractions(beanFactory);
 	}
 
 	@Test

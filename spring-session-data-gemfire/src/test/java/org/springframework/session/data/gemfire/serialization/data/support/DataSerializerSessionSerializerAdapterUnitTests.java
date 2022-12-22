@@ -2,7 +2,6 @@
  * Copyright (c) VMware, Inc. 2022. All rights reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
-
 package org.springframework.session.data.gemfire.serialization.data.support;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -16,25 +15,34 @@ import static org.mockito.Mockito.when;
 import java.io.DataInput;
 import java.io.DataOutput;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
+import org.springframework.data.gemfire.tests.integration.IntegrationTestsSupport;
 import org.springframework.session.Session;
 import org.springframework.session.data.gemfire.serialization.SessionSerializer;
 
 /**
- * Unit tests for {@link DataSerializerSessionSerializerAdapter}.
+ * Unit Tests for {@link DataSerializerSessionSerializerAdapter}.
  *
  * @author John Blum
  * @see java.io.DataInput
  * @see java.io.DataOutput
  * @see org.junit.Test
  * @see org.mockito.Mockito
+ * @see org.springframework.data.gemfire.tests.integration.IntegrationTestsSupport
  * @see org.springframework.session.Session
  * @see org.springframework.session.data.gemfire.serialization.SessionSerializer
  * @see org.springframework.session.data.gemfire.serialization.data.support.DataSerializerSessionSerializerAdapter
  * @since 2.0.0
  */
-public class DataSerializerSessionSerializerAdapterUnitTests {
+public class DataSerializerSessionSerializerAdapterUnitTests extends IntegrationTestsSupport {
+
+	// TODO: Figure out why this is necessary for Gradle but not when running tests in the IDE!
+	@BeforeClass
+	public static void unregisterAllDataSerializersBeforeTests() {
+		unregisterAllDataSerializers();
+	}
 
 	@Test
 	@SuppressWarnings("unchecked")
@@ -65,7 +73,6 @@ public class DataSerializerSessionSerializerAdapterUnitTests {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
 	@Test(expected = IllegalStateException.class)
 	public void getUninitializedSessionSerializerThrowsIllegalStateException() {
 

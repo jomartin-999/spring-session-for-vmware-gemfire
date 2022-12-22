@@ -9,7 +9,7 @@ import static org.springframework.data.gemfire.util.RuntimeExceptionFactory.newU
 import java.util.Collections;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.springframework.session.web.http.CookieSerializer;
 

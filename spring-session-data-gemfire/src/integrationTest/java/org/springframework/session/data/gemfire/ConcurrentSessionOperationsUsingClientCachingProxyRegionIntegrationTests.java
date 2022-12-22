@@ -56,20 +56,20 @@ import org.springframework.test.context.junit4.SpringRunner;
  * {@link ClientCache client} {@link ClientRegionShortcut#LOCAL} {@link Region}.
  *
  * @author John Blum
- * @see java.time.Instant
- * @see org.junit.Test
- * @see org.mockito.Mockito
- * @see org.apache.geode.DataSerializer
- * @see org.apache.geode.cache.GemFireCache
- * @see org.apache.geode.cache.Region
- * @see org.apache.geode.cache.client.ClientCache
- * @see org.apache.geode.cache.client.Pool
- * @see org.apache.geode.cache.client.PoolManager
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.AbstractConcurrentSessionOperationsIntegrationTests
- * @see org.springframework.session.data.gemfire.serialization.SessionSerializer
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see Instant
+ * @see Test
+ * @see Mockito
+ * @see DataSerializer
+ * @see GemFireCache
+ * @see Region
+ * @see ClientCache
+ * @see Pool
+ * @see PoolManager
+ * @see Session
+ * @see AbstractConcurrentSessionOperationsIntegrationTests
+ * @see SessionSerializer
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.1.x
  */
 @RunWith(SpringRunner.class)

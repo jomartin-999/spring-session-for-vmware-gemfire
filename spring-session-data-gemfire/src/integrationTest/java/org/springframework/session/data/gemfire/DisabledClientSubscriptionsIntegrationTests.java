@@ -15,7 +15,7 @@ import static org.mockito.Mockito.verify;
 import java.io.IOException;
 import java.time.Duration;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
 import org.junit.After;
 import org.junit.Before;
@@ -47,22 +47,22 @@ import org.springframework.test.context.junit4.SpringRunner;
  * or register interests calls are made when HTTP {@link Session} events are disabled.
  *
  * @author John Blum
- * @see org.junit.Test
+ * @see Test
  * @see org.mockito.Mockito
  * @see org.mockito.Spy
- * @see org.apache.geode.cache.Region
- * @see org.springframework.context.annotation.AnnotationConfigApplicationContext
- * @see org.springframework.context.annotation.Bean
- * @see org.springframework.data.gemfire.config.annotation.CacheServerApplication
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheApplication
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.GemFireOperationsSessionRepository
- * @see org.springframework.session.events.AbstractSessionEvent
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see Region
+ * @see AnnotationConfigApplicationContext
+ * @see Bean
+ * @see CacheServerApplication
+ * @see ClientCacheApplication
+ * @see Session
+ * @see EnableGemFireHttpSession
+ * @see GemFireHttpSessionConfiguration
+ * @see AbstractGemFireIntegrationTests
+ * @see GemFireOperationsSessionRepository
+ * @see AbstractSessionEvent
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.2.0
  */
 @RunWith(SpringRunner.class)

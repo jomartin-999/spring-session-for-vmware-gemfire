@@ -23,8 +23,8 @@ import org.springframework.session.data.gemfire.config.annotation.web.http.GemFi
  * Unit Tests for {@link SpringSessionGemFireConfigurer}.
  *
  * @author John Blum
- * @see Test
- * @see SpringSessionGemFireConfigurer
+ * @see org.junit.Test
+ * @see org.springframework.session.data.gemfire.config.annotation.web.http.support.SpringSessionGemFireConfigurer
  * @since 2.1.1
  */
 public class SpringSessionGemFireConfigurerUnitTests {

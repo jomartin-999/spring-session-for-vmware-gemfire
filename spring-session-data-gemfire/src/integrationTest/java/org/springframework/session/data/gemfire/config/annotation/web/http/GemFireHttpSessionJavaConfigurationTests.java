@@ -34,15 +34,15 @@ import org.springframework.test.context.web.WebAppConfiguration;
  *
  * @author John Blum
  * @since 1.1.0
- * @see org.junit.Test
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.test.annotation.DirtiesContext
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringJUnit4ClassRunner
- * @see org.springframework.test.context.web.WebAppConfiguration
- * @see org.apache.geode.cache.Cache
- * @see org.apache.geode.cache.Region
+ * @see Test
+ * @see Session
+ * @see AbstractGemFireIntegrationTests
+ * @see DirtiesContext
+ * @see ContextConfiguration
+ * @see SpringJUnit4ClassRunner
+ * @see WebAppConfiguration
+ * @see Cache
+ * @see Region
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration

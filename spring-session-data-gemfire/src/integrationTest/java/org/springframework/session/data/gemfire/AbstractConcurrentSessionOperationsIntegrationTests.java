@@ -35,14 +35,14 @@ import org.springframework.util.StringUtils;
  * based Integration Tests.
  *
  * @author John Blum
- * @see java.time.Instant
- * @see org.junit.Test
- * @see org.mockito.Mockito
- * @see org.springframework.session.Session
- * @see org.springframework.session.SessionRepository
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see edu.umd.cs.mtc.MultithreadedTestCase
- * @see edu.umd.cs.mtc.TestFramework
+ * @see Instant
+ * @see Test
+ * @see Mockito
+ * @see Session
+ * @see SessionRepository
+ * @see AbstractGemFireIntegrationTests
+ * @see MultithreadedTestCase
+ * @see TestFramework
  * @since 2.1.0
  */
 public abstract class AbstractConcurrentSessionOperationsIntegrationTests extends AbstractGemFireIntegrationTests {

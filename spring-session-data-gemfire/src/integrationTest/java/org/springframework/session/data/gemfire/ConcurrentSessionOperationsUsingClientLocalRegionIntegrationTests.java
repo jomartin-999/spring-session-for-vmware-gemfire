@@ -28,15 +28,15 @@ import org.springframework.test.context.junit4.SpringRunner;
  * {@link ClientCache client} {@link ClientRegionShortcut#LOCAL} {@link Region}.
  *
  * @author John Blum
- * @see org.junit.Test
- * @see edu.umd.cs.mtc.TestFramework
- * @see org.apache.geode.cache.Region
- * @see org.apache.geode.cache.client.ClientCache
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheApplication
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.AbstractConcurrentSessionOperationsIntegrationTests
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see Test
+ * @see TestFramework
+ * @see Region
+ * @see ClientCache
+ * @see ClientCacheApplication
+ * @see Session
+ * @see AbstractConcurrentSessionOperationsIntegrationTests
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.1.x
  */
 @RunWith(SpringRunner.class)

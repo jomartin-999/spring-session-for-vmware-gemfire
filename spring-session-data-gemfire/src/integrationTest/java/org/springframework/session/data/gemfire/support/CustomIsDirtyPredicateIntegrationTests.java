@@ -25,9 +25,9 @@ import org.springframework.test.context.junit4.SpringRunner;
  * Integration Tests for custom {@link IsDirtyPredicate}.
  *
  * @author John Blum
- * @see org.junit.Test
- * @see org.springframework.session.data.gemfire.support.IsDirtyPredicate
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
+ * @see Test
+ * @see IsDirtyPredicate
+ * @see AbstractGemFireIntegrationTests
  * @since 2.1.2
  */
 @RunWith(SpringRunner.class)

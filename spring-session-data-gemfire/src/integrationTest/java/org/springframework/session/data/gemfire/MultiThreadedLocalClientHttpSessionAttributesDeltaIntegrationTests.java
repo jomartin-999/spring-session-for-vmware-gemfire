@@ -28,14 +28,14 @@ import org.springframework.test.context.junit4.SpringRunner;
  * using Spring Session backed by Apache Geode or Pivotal GemFire in a Multi-Threaded context.
  *
  * @author John Blum
- * @see org.junit.Test
- * @see edu.umd.cs.mtc.MultithreadedTestCase
- * @see edu.umd.cs.mtc.TestFramework
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see Test
+ * @see MultithreadedTestCase
+ * @see TestFramework
+ * @see Session
+ * @see EnableGemFireHttpSession
+ * @see GemFireHttpSessionConfiguration
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.1.1
  */
 @RunWith(SpringRunner.class)

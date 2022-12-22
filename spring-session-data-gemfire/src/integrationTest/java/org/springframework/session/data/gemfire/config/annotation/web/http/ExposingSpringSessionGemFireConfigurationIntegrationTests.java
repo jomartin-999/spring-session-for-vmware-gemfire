@@ -36,16 +36,16 @@ import org.springframework.session.data.gemfire.serialization.SessionSerializer;
  * Integration Tests asserting the correct behavior when exposing Spring Session configuration metadata at runtime.
  *
  * @author John Blum
- * @see org.junit.Test
- * @see org.springframework.context.ConfigurableApplicationContext
- * @see org.springframework.context.annotation.Bean
- * @see org.springframework.context.annotation.Configuration
- * @see org.springframework.core.env.Environment
- * @see org.springframework.core.env.PropertySource
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheApplication
- * @see org.springframework.data.gemfire.tests.mock.annotation.EnableGemFireMockObjects
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.support.SpringSessionGemFireConfigurer
+ * @see Test
+ * @see ConfigurableApplicationContext
+ * @see Bean
+ * @see Configuration
+ * @see Environment
+ * @see PropertySource
+ * @see ClientCacheApplication
+ * @see EnableGemFireMockObjects
+ * @see AbstractGemFireIntegrationTests
+ * @see SpringSessionGemFireConfigurer
  * @since 1.0.0
  */
 @SuppressWarnings("unused")

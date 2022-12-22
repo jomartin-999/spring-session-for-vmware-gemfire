@@ -27,16 +27,16 @@ import org.springframework.session.Session;
  * Unit Tests for {@link SessionCacheTypeAwareRegionFactoryBean}.
  *
  * @author John Blum
- * @see Test
- * @see Mock
+ * @see org.junit.Test
+ * @see org.mockito.Mock
  * @see org.mockito.Mockito
- * @see Cache
- * @see GemFireCache
- * @see Region
- * @see RegionShortcut
- * @see ClientCache
- * @see ClientRegionShortcut
- * @see SessionCacheTypeAwareRegionFactoryBean
+ * @see org.apache.geode.cache.Cache
+ * @see org.apache.geode.cache.GemFireCache
+ * @see org.apache.geode.cache.Region
+ * @see org.apache.geode.cache.RegionShortcut
+ * @see org.apache.geode.cache.client.ClientCache
+ * @see org.apache.geode.cache.client.ClientRegionShortcut
+ * @see org.springframework.session.data.gemfire.config.annotation.web.http.support.SessionCacheTypeAwareRegionFactoryBean
  * @since 1.1.0
  */
 @RunWith(MockitoJUnitRunner.class)

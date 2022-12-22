@@ -39,22 +39,22 @@ import org.springframework.session.data.gemfire.serialization.SessionSerializer;
  * or Pivotal GemFire as the (HTTP) {@link Session} state management provider in Spring Session.
  *
  * @author John Blum
- * @see org.junit.Test
+ * @see Test
  * @see org.mockito.Mockito
- * @see org.springframework.context.ConfigurableApplicationContext
- * @see org.springframework.context.annotation.AnnotationConfigApplicationContext
- * @see org.springframework.context.annotation.Bean
- * @see org.springframework.context.annotation.Configuration
- * @see org.springframework.context.support.PropertySourcesPlaceholderConfigurer
- * @see org.springframework.core.env.PropertySource
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheApplication
- * @see org.springframework.data.gemfire.tests.mock.annotation.EnableGemFireMockObjects
- * @see org.springframework.mock.env.MockPropertySource
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.support.SpringSessionGemFireConfigurer
- * @see org.springframework.session.data.gemfire.expiration.SessionExpirationPolicy
- * @see org.springframework.session.data.gemfire.serialization.SessionSerializer
+ * @see ConfigurableApplicationContext
+ * @see AnnotationConfigApplicationContext
+ * @see Bean
+ * @see Configuration
+ * @see PropertySourcesPlaceholderConfigurer
+ * @see PropertySource
+ * @see ClientCacheApplication
+ * @see EnableGemFireMockObjects
+ * @see MockPropertySource
+ * @see Session
+ * @see AbstractGemFireIntegrationTests
+ * @see SpringSessionGemFireConfigurer
+ * @see SessionExpirationPolicy
+ * @see SessionSerializer
  * @since 2.0.4
  */
 @SuppressWarnings("unused")

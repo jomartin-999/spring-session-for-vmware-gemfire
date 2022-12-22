@@ -43,20 +43,20 @@ import org.springframework.session.data.gemfire.serialization.pdx.support.PdxSer
  * Integration Tests for {@link GemFireHttpSessionConfiguration}.
  *
  * @author John Blum
- * @see java.io.DataInput
- * @see java.io.DataOutput
- * @see org.junit.Test
+ * @see DataInput
+ * @see DataOutput
+ * @see Test
  * @see org.mockito.Mockito
- * @see org.apache.geode.cache.GemFireCache
- * @see org.apache.geode.cache.Region
- * @see org.apache.geode.cache.query.Index
- * @see org.springframework.context.ConfigurableApplicationContext
- * @see org.springframework.context.annotation.Bean
- * @see org.springframework.data.gemfire.GemfireTemplate
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheApplication
- * @see org.springframework.data.gemfire.tests.integration.SpringApplicationContextIntegrationTestsSupport
- * @see org.springframework.data.gemfire.tests.mock.annotation.EnableGemFireMockObjects
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
+ * @see GemFireCache
+ * @see Region
+ * @see Index
+ * @see ConfigurableApplicationContext
+ * @see Bean
+ * @see GemfireTemplate
+ * @see ClientCacheApplication
+ * @see SpringApplicationContextIntegrationTestsSupport
+ * @see EnableGemFireMockObjects
+ * @see GemFireHttpSessionConfiguration
  * @since 1.1.0
  */
 @SuppressWarnings("unused")

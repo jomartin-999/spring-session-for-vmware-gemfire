@@ -28,15 +28,15 @@ import org.springframework.test.context.junit4.SpringRunner;
  * across a client/server topology.
  *
  * @author John Blum
- * @see org.junit.Test
- * @see org.junit.runner.RunWith
+ * @see Test
+ * @see RunWith
  * @see org.springframework.context.ConfigurableApplicationContext
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see Session
+ * @see AbstractGemFireIntegrationTests
+ * @see EnableGemFireHttpSession
+ * @see GemFireHttpSessionConfiguration
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @see org.apache.geode.cache.Cache
  * @see org.apache.geode.cache.Region
  * @see org.apache.geode.cache.client.ClientCache

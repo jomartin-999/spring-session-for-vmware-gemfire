@@ -40,20 +40,20 @@ import lombok.RequiredArgsConstructor;
  * de/serialized using PDX.
  *
  * @author John Blum
- * @see org.junit.Test
- * @see org.springframework.context.annotation.AnnotationConfigApplicationContext
- * @see org.springframework.context.annotation.Bean
- * @see org.springframework.data.gemfire.config.annotation.CacheServerApplication
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheApplication
- * @see org.springframework.data.gemfire.config.annotation.EnablePdx
- * @see org.springframework.data.gemfire.config.annotation.PeerCacheConfigurer
- * @see org.springframework.data.gemfire.mapping.MappingPdxSerializer
- * @see org.springframework.session.Session
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see Test
+ * @see AnnotationConfigApplicationContext
+ * @see Bean
+ * @see CacheServerApplication
+ * @see ClientCacheApplication
+ * @see EnablePdx
+ * @see PeerCacheConfigurer
+ * @see MappingPdxSerializer
+ * @see Session
+ * @see AbstractGemFireIntegrationTests
+ * @see EnableGemFireHttpSession
+ * @see GemFireHttpSessionConfiguration
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.1.3
  */
 @SuppressWarnings("unused")

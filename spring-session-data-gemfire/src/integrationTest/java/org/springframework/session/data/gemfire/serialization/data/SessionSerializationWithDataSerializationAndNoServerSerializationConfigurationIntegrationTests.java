@@ -46,20 +46,20 @@ import lombok.ToString;
  * Serialization configuration.
  *
  * @author John Blum
- * @see java.io.Serializable
- * @see org.junit.Test
- * @see org.apache.geode.cache.client.ClientCache
- * @see org.springframework.context.annotation.AnnotationConfigApplicationContext
- * @see org.springframework.context.annotation.Bean
- * @see org.springframework.data.gemfire.config.annotation.CacheServerApplication
- * @see org.springframework.data.gemfire.config.annotation.ClientCacheApplication
- * @see org.springframework.session.Session
- * @see org.springframework.session.SessionRepository
- * @see org.springframework.session.data.gemfire.AbstractGemFireIntegrationTests
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
- * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
- * @see org.springframework.test.context.ContextConfiguration
- * @see org.springframework.test.context.junit4.SpringRunner
+ * @see Serializable
+ * @see Test
+ * @see ClientCache
+ * @see AnnotationConfigApplicationContext
+ * @see Bean
+ * @see CacheServerApplication
+ * @see ClientCacheApplication
+ * @see Session
+ * @see SessionRepository
+ * @see AbstractGemFireIntegrationTests
+ * @see EnableGemFireHttpSession
+ * @see GemFireHttpSessionConfiguration
+ * @see ContextConfiguration
+ * @see SpringRunner
  * @since 2.6.0
  */
 @RunWith(SpringRunner.class)

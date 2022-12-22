@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 import org.apache.geode.DataSerializer;
 import org.apache.geode.cache.Cache;
@@ -86,7 +86,7 @@ import org.springframework.util.StringUtils;
 /**
  * The {@link GemFireHttpSessionConfiguration} class is a Spring {@link Configuration @Configuration} class
  * used to configure and initialize Pivotal GemFire/Apache Geode as a clustered, distributed and replicated
- * {@link javax.servlet.http.HttpSession} provider implementation in Spring {@link Session}.
+ * {@link jakarta.servlet.http.HttpSession} provider implementation in Spring {@link Session}.
  *
  * @author John Blum
  * @see Duration
@@ -653,6 +653,9 @@ public class GemFireHttpSessionConfiguration extends AbstractGemFireHttpSessionC
 		// Expose configuration as {@link Properties} in the Spring {@link Environment}
 		// if {@link EnableGemFireHttpSession#exposeConfigurationAsProperties} is set to {@literal true}.
 		exposeSpringSessionGemFireConfiguration();
+
+		// Initialize GemFire/Geode if possible
+		registerSessionSerializerBeanAlias();
 	}
 
 	private void configureClientRegionShortcut(AnnotationAttributes enableGemFireHttpSessionAttributes) {
@@ -908,7 +911,7 @@ public class GemFireHttpSessionConfiguration extends AbstractGemFireHttpSessionC
 	}
 
 	@PostConstruct
-	public void initGemFire() {
+	public void registerSessionSerializerBeanAlias() {
 		getBeanFactory().registerAlias(getSessionSerializerBeanName(), SESSION_SERIALIZER_BEAN_ALIAS);
 	}
 
