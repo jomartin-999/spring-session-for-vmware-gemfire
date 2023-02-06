@@ -59,7 +59,7 @@ class DependencySetPlugin implements Plugin<Project> {
 			"org.mockito:mockito-core",
 			"org.projectlombok:lombok",
 			"org.springframework:spring-test",
-			"org.springframework.data:spring-data-geode-test",
+			"com.vmware.gemfire:spring-test-gemfire-9.15-3.0",
 			"edu.umd.cs.mtc:multithreadedtc"
 		]
 
