@@ -29,6 +29,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -180,8 +181,8 @@ public class DataSerializableSessionSerializerTests {
 			this.sessionSerializer.deserialize(new DataInputStream(new ByteArrayInputStream(outBytes.toByteArray())));
 
 		assertThat(deserializedSession).isEqualTo(expectedSession);
-		assertThat(deserializedSession.getCreationTime()).isEqualTo(expectedSession.getCreationTime());
-		assertThat(deserializedSession.getLastAccessedTime()).isEqualTo(expectedSession.getLastAccessedTime());
+		assertThat(deserializedSession.getCreationTime()).isEqualTo(expectedSession.getCreationTime().truncatedTo(ChronoUnit.MILLIS));
+		assertThat(deserializedSession.getLastAccessedTime()).isEqualTo(expectedSession.getLastAccessedTime().truncatedTo(ChronoUnit.MILLIS));
 		assertThat(deserializedSession.getMaxInactiveInterval()).isEqualTo(expectedSession.getMaxInactiveInterval());
 		assertThat(deserializedSession.getPrincipalName()).isNull();
 

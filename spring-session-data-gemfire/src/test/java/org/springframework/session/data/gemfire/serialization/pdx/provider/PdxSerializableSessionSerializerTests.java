@@ -14,6 +14,7 @@ import static org.springframework.session.data.gemfire.AbstractGemFireOperations
 
 import java.time.Duration;
 import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -119,8 +120,8 @@ public class PdxSerializableSessionSerializerTests {
 
 		assertThat(session).isNotNull();
 		assertThat(session.getId()).isEqualTo("123");
-		assertThat(session.getCreationTime()).isEqualTo(expectedCreationTime);
-		assertThat(session.getLastAccessedTime()).isEqualTo(expectedLastAccessedTime);
+		assertThat(session.getCreationTime()).isEqualTo(expectedCreationTime.truncatedTo(ChronoUnit.MILLIS));
+		assertThat(session.getLastAccessedTime()).isEqualTo(expectedLastAccessedTime.truncatedTo(ChronoUnit.MILLIS));
 		assertThat(session.getMaxInactiveInterval()).isEqualTo(expectedMaxInactiveInterval);
 		assertThat(session.getPrincipalName()).isEqualTo("jonDoe");
 		assertThat(this.sessionSerializer.newMap(session.getAttributes())).isEqualTo(expectedAttributes);

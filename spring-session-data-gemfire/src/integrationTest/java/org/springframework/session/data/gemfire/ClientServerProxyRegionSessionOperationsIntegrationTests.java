@@ -7,6 +7,7 @@ package org.springframework.session.data.gemfire;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.IOException;
+import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.BeforeClass;
@@ -85,7 +86,7 @@ public class ClientServerProxyRegionSessionOperationsIntegrationTests extends Ab
 
 		assertThat(loadedSession).isNotNull();
 		assertThat(loadedSession.getId()).isEqualTo(session.getId());
-		assertThat(loadedSession.getCreationTime()).isEqualTo(session.getCreationTime());
+		assertThat(loadedSession.getCreationTime()).isEqualTo(session.getCreationTime().truncatedTo(ChronoUnit.MILLIS));
 		assertThat(loadedSession.getLastAccessedTime().compareTo(session.getLastAccessedTime()))
 			.isGreaterThanOrEqualTo(0);
 

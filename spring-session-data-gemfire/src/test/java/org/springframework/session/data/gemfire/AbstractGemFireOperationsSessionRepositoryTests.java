@@ -38,6 +38,7 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.time.Duration;
 import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -2708,7 +2709,7 @@ public class AbstractGemFireOperationsSessionRepositoryTests {
 
 		assertThat(session.getId()).isEqualTo("1");
 		assertThat(session.getCreationTime()).isEqualTo(creationTime);
-		assertThat(session.getLastAccessedTime()).isEqualTo(lastAccessedTime);
+		assertThat(session.getLastAccessedTime()).isEqualTo(lastAccessedTime.truncatedTo(ChronoUnit.MILLIS));
 		assertThat(session.hasDelta()).isTrue();
 		assertThat(session.getMaxInactiveInterval()).isEqualTo(Duration.ofSeconds(300L));
 		assertThat(session.getAttributeNames().isEmpty()).isTrue();
@@ -2936,7 +2937,7 @@ public class AbstractGemFireOperationsSessionRepositoryTests {
 
 		GemFireSession<?> sessionTwo = new GemFireSession<>("2");
 
-		assertThat(sessionOne.getCreationTime()).isEqualTo(twoHoursAgo);
+		assertThat(sessionOne.getCreationTime()).isEqualTo(twoHoursAgo.truncatedTo(ChronoUnit.MILLIS));
 		assertThat(sessionTwo.getCreationTime().isAfter(twoHoursAgo)).isTrue();
 		assertThat(sessionOne.compareTo(sessionTwo)).isLessThan(0);
 		assertThat(sessionOne.compareTo(sessionOne)).isEqualTo(0);
@@ -3440,25 +3441,25 @@ public class AbstractGemFireOperationsSessionRepositoryTests {
 		sessionAttributes.getMap().put("1", "TEST");
 
 		assertThat(sessionAttributes.getIsDirtyPredicate()).isEqualTo(DeltaAwareDirtyPredicate.INSTANCE);
-		assertThat(sessionAttributes.<Delta>getAttribute("1")).isEqualTo("TEST");
+		assertThat(sessionAttributes.<String>getAttribute("1")).isEqualTo("TEST");
 		assertThat(sessionAttributes.hasDelta()).isFalse();
 		assertThat(sessionAttributes.getSessionAttributeDeltas()).isEmpty();
 
 		sessionAttributes.setAttribute("1", "TEST");
 
-		assertThat(sessionAttributes.<Delta>getAttribute("1")).isEqualTo("TEST");
+		assertThat(sessionAttributes.<String>getAttribute("1")).isEqualTo("TEST");
 		assertThat(sessionAttributes.hasDelta()).isTrue();
 		assertThat(sessionAttributes.getSessionAttributeDeltas()).containsExactly("1");
 
 		sessionAttributes.commit();
 
-		assertThat(sessionAttributes.<Delta>getAttribute("1")).isEqualTo("TEST");
+		assertThat(sessionAttributes.<String>getAttribute("1")).isEqualTo("TEST");
 		assertThat(sessionAttributes.hasDelta()).isFalse();
 		assertThat(sessionAttributes.getSessionAttributeDeltas()).isEmpty();
 
 		sessionAttributes.setAttribute("1", "TEST");
 
-		assertThat(sessionAttributes.<Delta>getAttribute("1")).isEqualTo("TEST");
+		assertThat(sessionAttributes.<String>getAttribute("1")).isEqualTo("TEST");
 		assertThat(sessionAttributes.hasDelta()).isTrue();
 		assertThat(sessionAttributes.getSessionAttributeDeltas()).containsExactly("1");
 	}
