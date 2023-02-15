@@ -73,25 +73,25 @@ sourceSets {
   }
 }
 
-integrationTest{
-  forkEvery = 1
-  maxParallelForks = 1
-
-  filter {
-    includeTestsMatching "*.*Tests"
-    includeTestsMatching "*.*Test"
-  }
-}
-
-test {
-  forkEvery = 1
-  maxParallelForks = 1
-
-  filter {
-    includeTestsMatching "*.*Tests"
-    includeTestsMatching "*.*Test"
-  }
-}
+//integrationTest{
+//  forkEvery = 1
+//  maxParallelForks = 1
+//
+//  filter {
+//    includeTestsMatching "*.*Tests"
+//    includeTestsMatching "*.*Test"
+//  }
+//}
+//
+//test {
+//  forkEvery = 1
+//  maxParallelForks = 1
+//
+//  filter {
+//    includeTestsMatching "*.*Tests"
+//    includeTestsMatching "*.*Test"
+//  }
+//}
 
 repositories {
   def additionalMavenRepoURLs = project.ext.get('additionalMavenRepoURLs')
