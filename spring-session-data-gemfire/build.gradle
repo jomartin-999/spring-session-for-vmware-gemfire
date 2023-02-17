@@ -34,10 +34,7 @@ dependencies {
   runtimeOnly "jakarta.servlet:jakarta.servlet-api"
 
   testImplementation 'edu.umd.cs.mtc:multithreadedtc'
-  testImplementation('org.springframework.data:spring-data-geode-test')
-  {
-    exclude group:'org.springframework.data',module:'spring-data-geode'
-  }
+  testImplementation('com.vmware.gemfire:spring-test-gemfire-9.15-2.6:1.0.0')
 
   testImplementation 'org.assertj:assertj-core'
   testImplementation 'junit:junit'
