@@ -30,8 +30,11 @@ dependencies {
   implementation 'org.springframework.security:spring-security-web'
 
   implementation 'org.springframework:spring-tx'
+  compileOnly "com.vmware.gemfire:geode-server-all:$gemfireVersion"
 
   runtimeOnly "jakarta.servlet:jakarta.servlet-api"
+
+  testImplementation "com.vmware.gemfire:geode-server-all:$gemfireVersion"
 
   testImplementation 'edu.umd.cs.mtc:multithreadedtc'
   testImplementation('com.vmware.gemfire:spring-test-gemfire-9.15-2.6:1.0.0')
