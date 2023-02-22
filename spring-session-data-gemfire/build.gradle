@@ -35,6 +35,24 @@ dependencies {
 
   runtimeOnly "jakarta.servlet:jakarta.servlet-api"
 
+  compileOnly "com.vmware.gemfire:geode-core:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:geode-logging:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:geode-cq:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:geode-wan:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:geode-gfsh:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:geode-lucene:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:geode-tcp-server:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:geode-deployment-legacy:$gemfireVersion"
+
+  testImplementation "com.vmware.gemfire:geode-core:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:geode-logging:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:geode-cq:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:geode-wan:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:geode-gfsh:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:geode-lucene:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:geode-tcp-server:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:geode-deployment-legacy:$gemfireVersion"
+
   testImplementation 'edu.umd.cs.mtc:multithreadedtc'
   testImplementation "com.vmware.gemfire:spring-test-gemfire-9.15-3.0"
 
