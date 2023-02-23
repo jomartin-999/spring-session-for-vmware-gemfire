@@ -35,6 +35,25 @@ dependencies {
 
   runtimeOnly "jakarta.servlet:jakarta.servlet-api"
 
+  compileOnly "com.vmware.gemfire:gemfire-core:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:gemfire-logging:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:gemfire-cq:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:gemfire-wan:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:gemfire-gfsh:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:gemfire-lucene:1.0.0-build.172"
+  compileOnly "com.vmware.gemfire:gemfire-tcp-server:$gemfireVersion"
+  compileOnly "com.vmware.gemfire:gemfire-deployment-chained-classloader:$gemfireVersion"
+
+  testImplementation "com.vmware.gemfire:gemfire-core:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:gemfire-logging:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:gemfire-cq:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:gemfire-wan:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:gemfire-gfsh:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:gemfire-lucene:1.0.0-build.172"
+  testImplementation "com.vmware.gemfire:gemfire-tcp-server:$gemfireVersion"
+  testImplementation "com.vmware.gemfire:gemfire-deployment-chained-classloader:$gemfireVersion"
+
+
   testImplementation 'edu.umd.cs.mtc:multithreadedtc'
   testImplementation "com.vmware.gemfire:spring-test-gemfire-10.0-3.0"
 
