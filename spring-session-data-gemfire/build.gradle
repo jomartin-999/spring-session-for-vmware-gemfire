@@ -37,7 +37,7 @@ dependencies {
   testImplementation "com.vmware.gemfire:geode-server-all:$gemfireVersion"
 
   testImplementation 'edu.umd.cs.mtc:multithreadedtc'
-  testImplementation('com.vmware.gemfire:spring-test-gemfire-9.15-2.6:1.0.0')
+  testImplementation("com.vmware.gemfire:spring-test-gemfire-9.15-2.6:$springTestGemFireVersion")
 
   testImplementation 'org.assertj:assertj-core'
   testImplementation 'junit:junit'
