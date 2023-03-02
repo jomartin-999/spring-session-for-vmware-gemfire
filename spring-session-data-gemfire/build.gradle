@@ -57,10 +57,7 @@ dependencies {
   integrationTestImplementation 'com.google.code.findbugs:jsr305'
   integrationTestImplementation 'org.springframework.shell:spring-shell'
   integrationTestImplementation 'org.springframework:spring-test'
-  integrationTestImplementation('org.springframework.data:spring-data-geode-test')
-      {
-        exclude group:'org.springframework.data',module:'spring-data-geode'
-      }
+  integrationTestImplementation("com.vmware.gemfire:spring-test-gemfire-9.15-2.7:$springTestGemFireVersion")
 }
 
 tasks.named("processIntegrationTestResources") {
