@@ -40,7 +40,6 @@ dependencies {
   compileOnly "com.vmware.gemfire:gemfire-cq:$gemfireVersion"
   compileOnly "com.vmware.gemfire:gemfire-wan:$gemfireVersion"
   compileOnly "com.vmware.gemfire:gemfire-gfsh:$gemfireVersion"
-  compileOnly "com.vmware.gemfire:gemfire-lucene:1.0.0-build.172"
   compileOnly "com.vmware.gemfire:gemfire-tcp-server:$gemfireVersion"
   compileOnly "com.vmware.gemfire:gemfire-deployment-chained-classloader:$gemfireVersion"
 
@@ -49,13 +48,12 @@ dependencies {
   testImplementation "com.vmware.gemfire:gemfire-cq:$gemfireVersion"
   testImplementation "com.vmware.gemfire:gemfire-wan:$gemfireVersion"
   testImplementation "com.vmware.gemfire:gemfire-gfsh:$gemfireVersion"
-  testImplementation "com.vmware.gemfire:gemfire-lucene:1.0.0-build.172"
   testImplementation "com.vmware.gemfire:gemfire-tcp-server:$gemfireVersion"
   testImplementation "com.vmware.gemfire:gemfire-deployment-chained-classloader:$gemfireVersion"
 
 
   testImplementation 'edu.umd.cs.mtc:multithreadedtc'
-  testImplementation('com.vmware.gemfire:spring-test-gemfire-10.0-2.7')
+  testImplementation("com.vmware.gemfire:spring-test-gemfire-10.0-2.7:$springTestGemFireVersion")
 
   testImplementation 'org.assertj:assertj-core'
   testImplementation 'junit:junit'
@@ -74,7 +72,7 @@ dependencies {
   integrationTestImplementation 'com.google.code.findbugs:jsr305'
   integrationTestImplementation 'org.springframework.shell:spring-shell'
   integrationTestImplementation 'org.springframework:spring-test'
-  integrationTestImplementation('com.vmware.gemfire:spring-test-gemfire-10.0-2.7')
+  integrationTestImplementation("com.vmware.gemfire:spring-test-gemfire-10.0-2.7:$springTestGemFireVersion")
 }
 
 tasks.named("processIntegrationTestResources") {
