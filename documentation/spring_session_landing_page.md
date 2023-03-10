@@ -33,7 +33,7 @@ To add Spring Session for VMware GemFire to a project:
 
     * **Maven**: Add the following block to the `pom.xml` file:
 
-        ```
+        ```xml
         <repository>
             <id>gemfire-release-repo</id>
             <name>Pivotal GemFire Release Repository</name>
@@ -43,7 +43,7 @@ To add Spring Session for VMware GemFire to a project:
 
     * **Gradle**: Add the following block to the `repositories` section of the `build.gradle` file:
 
-        ```
+        ```xml
         repositories {
             mavenCentral()
             maven {
@@ -60,7 +60,7 @@ To add Spring Session for VMware GemFire to a project:
 
     * **Maven**: Add the following to the `.m2/settings.xml` file. Replace `MY-USERNAME@example` and `MY-DECRYPTED-PASSWORD` with your Pivotal Commercial Maven Repository credentials.
 
-        ```
+        ```xml
         <settings>
             <servers>
                 <server>
@@ -74,7 +74,7 @@ To add Spring Session for VMware GemFire to a project:
 
     * **Gradle**: Add the following to the local (`.gradle/gradle.properties`) or project `gradle.properties` file. Replace `MY-USERNAME@example` and `MY-DECRYPTED-PASSWORD` with your Pivotal Commercial Maven Repository credentials.
 
-        ```
+        ```xml
         gemfireRepoUsername=MY-USERNAME@example.com 
         gemfireRepoPassword=MY-DECRYPTED-PASSWORD
         ```
@@ -85,7 +85,7 @@ To add Spring Session for VMware GemFire to a project:
 
     * **Maven**: Add the following to your `pom.xml` file. Replace `VERSION` with the current version of Spring Session for VMware GemFire available.
 
-        ```
+        ```xml
         <dependency>
             <groupId>com.vmware.gemfire</groupId>
             <artifactId>spring-session-2.7-gemfire-9.15</artifactId>
@@ -95,7 +95,7 @@ To add Spring Session for VMware GemFire to a project:
 
     * **Gradle**: Add the following to your `build.gradle` file. Replace `VERSION` with the current version of Spring Session for VMware GemFire available.
 
-        ```
+        ```xml
         dependencies {
             implementation "com.vmware.gemfire:spring-session-2.7-gemfire-9.15:VERSION"
         }
@@ -109,7 +109,7 @@ To add Spring Session for VMware GemFire to a project:
 
     * **Maven**: Add the following to your `pom.xml` file. Replace `VERSION` with the current version of Spring Session for VMware GemFire available and `GEMFIRE_VERSION` with the version of VMware GemFire being used for the project.
 
-        ```
+        ```xml
         <dependency>
             <groupId>com.vmware.gemfire</groupId>
             <artifactId>spring-session-2.7-gemfire-9.15</artifactId>
@@ -130,7 +130,7 @@ To add Spring Session for VMware GemFire to a project:
 
     * **Gradle**: Add the following to your `build.gradle` file. Replace `VERSION` with the current version of Spring Session for VMware GemFire available and `GEMFIRE_VERSION` with the version of VMware GemFire being used for the project.
 
-        ```
+        ```xml
         dependencies {
             implementation "com.vmware.gemfire:spring-session-2.7-gemfire-9.15:VERSION"
             implementation "com.vmware.gemfire:geode-core:GEMFIRE_VERSION"
@@ -145,7 +145,7 @@ To add Spring Session for VMware GemFire to a project:
 
     * **Maven**: Add the following to your `pom.xml` file. Replace `VERSION` with the current version of Spring Session for VMware GemFire available and `GEMFIRE_VERSION` with the version of VMware GemFire being used for the project.
 
-        ```
+        ```xml
         <dependency>
             <groupId>com.vmware.gemfire</groupId>
             <artifactId>spring-session-2.7-gemfire-9.15</artifactId>
@@ -166,7 +166,7 @@ To add Spring Session for VMware GemFire to a project:
 
     * **Gradle**: Add the following to your `build.gradle` file. Replace `VERSION` with the current version of Spring Boot for VMware GemFire available and `GEMFIRE_VERSION` with the version of VMware GemFire being used for the project.
 
-        ```
+        ```xml
         dependencies {
             implementation "com.vmware.gemfire:spring-session-2.7-gemfire-9.15:VERSION"
             implementation ("com.vmware.gemfire:geode-server-all:GEMFIRE_VERSION"){
