@@ -1,7 +1,7 @@
 plugins {
   id 'java-library'
   id 'maven-publish'
-  id "io.freefair.lombok" version "5.3.0"
+  id "io.freefair.lombok" version "8.0.1"
   id 'nebula.facet' version "9.6.3"
   id 'dependency-constraints'
   id 'gemfire-repo-artifact-publishing'
@@ -24,7 +24,7 @@ dependencies {
   implementation 'org.springframework:spring-jcl'
 
   api "com.vmware.gemfire:spring-data-2.7-gemfire-${gemfireBaseVersion}:${springDataGemFireVersion}"
-  api 'org.springframework.session:spring-session-core:2.7.0'
+  api 'org.springframework.session:spring-session-core:2.7.1'
 
 
   implementation 'com.google.code.findbugs:jsr305'
@@ -38,7 +38,7 @@ dependencies {
   testImplementation "com.vmware.gemfire:geode-server-all:$gemfireVersion"
 
   testImplementation 'edu.umd.cs.mtc:multithreadedtc'
-  testImplementation('com.vmware.gemfire:spring-test-gemfire-9.15-2.7:1.0.0')
+  testImplementation("com.vmware.gemfire:spring-test-gemfire-9.15-2.7:$springTestGemFireVersion")
 
   testImplementation 'org.assertj:assertj-core'
   testImplementation 'junit:junit'
@@ -57,10 +57,7 @@ dependencies {
   integrationTestImplementation 'com.google.code.findbugs:jsr305'
   integrationTestImplementation 'org.springframework.shell:spring-shell'
   integrationTestImplementation 'org.springframework:spring-test'
-  integrationTestImplementation('org.springframework.data:spring-data-geode-test')
-      {
-        exclude group:'org.springframework.data',module:'spring-data-geode'
-      }
+  integrationTestImplementation("com.vmware.gemfire:spring-test-gemfire-9.15-2.7:$springTestGemFireVersion")
 }
 
 tasks.named("processIntegrationTestResources") {
