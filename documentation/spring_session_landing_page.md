@@ -8,6 +8,18 @@ By integrating with VMware GemFire, you have the full power of this technology (
 
 This reference guide explains how to add the Spring Session for VMware GemFire dependency to your Spring Boot or Spring Data project. Once the dependency has been added, refer to the [Spring Boot for Apache Geode Reference Guide](https://docs.spring.io/spring-boot-data-geode-build/current/reference/html5/) and [Spring Session](https://docs.spring.io/spring-session-data-geode/docs/current/reference/html5/) for in-depth information about using the dependency.
 
+## Release Notes:
+### 1.1.1
+* Update to latest Spring Session patch version (3.0.1, 2.7.1 and 2.6.3)
+* Update to latest Spring Framework patch version (6.0.7 and 5.3.26)
+* Update all dependencies to latest patch version
+
+### 1.1.0
+* First release that removes dependency on Spring Session For Apache Geode
+* "ByoG" - Bring your own GemFire. Requires users to provide a working version of VMware GemFire.
+
+### 1.0.0
+* Initial Spring Session For VMware GemFire for VMware GemFire, still dependent on Spring Session For Apache Geode
 
 ## Add Spring Data for VMware GemFire to a Project
 
