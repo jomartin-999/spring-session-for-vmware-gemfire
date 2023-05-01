@@ -39,7 +39,7 @@ Spring Session for VMware GemFire 1.1.0 is compatibile with the following:
 
 ### 1.0.0
 
-* Initial Spring Session For VMware GemFire for VMware GemFire, still dependent on Spring Session For Apache Geode
+* Initial Spring Session For VMware GemFire release, still dependent on Spring Session For Apache Geode
 
 ## Add Spring Data for VMware GemFire to a Project
 
