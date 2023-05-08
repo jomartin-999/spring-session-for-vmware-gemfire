@@ -12,11 +12,10 @@ title: Release Notes
 
 ### 1.1.1
 
-* Update Spring Session 2.6 to Spring Session 2.6.14
-* Update Spring Session 2.7 to Spring Session 2.7.10
-* Update Spring Session 3.0 to Spring Session 3.0.5
+* Update Spring Session 2.6 to Spring Session 2.6.3
+* Update Spring Session 2.7 to Spring Session 2.7.1
+* Update Spring Session 3.0 to Spring Session 3.0.1
 * Update all dependencies to latest patch version
-* Fixed an issue with querying a Region whose name contains a hyphen (`-`). 
 
 ### 1.1.0
 
